@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>观象授时</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!-- <meta name="Author" content="" /> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="/gxss/style/one/css/style.css" rel="stylesheet" />
+  <script src="/gxss/style/one/js/jquery.min.js"></script>
+  <script src="/gxss/style/one/js/comm.js"></script>
+  <script src="/gxss/style/one/js/zh-cn/lang.js"></script>
+  <link href="/gxss/style/one/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/gxss/style/one/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/gxss/style/one/bootstrap/diy.js"></script>
+  <script src="/gxss/style/one/js/xgcj/wow.min.js"></script>
+  <link href="/gxss/style/one/bootstrap/dropdown.css" rel="stylesheet">
+  <link href="/gxss/style/one/js/xgcj/video-js.css" rel="stylesheet">
+  <script src="/gxss/style/one/js/xgcj/video.js"></script>
+  <script src="/gxss/style/one/js/script.js"></script>
+  <!--[if lt IE 9]>
+         <script src="/gxss/style/one/bootstrap/js/html5shiv.js"></script>
+         <script src="/gxss/style/one/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="/gxss/style/one/js/xgcj/lightbox.css" media="screen" />
+  <script src="/gxss/style/one/js/xgcj/lightbox-2.6.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $(".menu_box").children("ul").prepend(
+        '<li class="bddh_box"><a href="tel:552"><i class="iconfont">&#xf01ef;</i>4000-123-456</a></li>')
+    })
+  </script>
+</head>
+
+<body>
+  <div class="page_style lanmupage page_l61">
+    <div class="top_box">
+      <div class="top_box_inner">
+        <div class="topcontent">
+          <div class="qhd-content" style="font-size:22px;color:#ff0000;line-height:32px;">
+            全国服务热线：020-1234 5678
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="logo"><a href="/"><img src="/gxss/style/images/logo.png" border="0"></a></div>
+        <div class="menu_box" id="Menu">
+          <ul>
+            {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"} 
+            {loop $data $r}
+               <li class="menu_style{if ($r[catid] == 6) && $catid == 0} menu_current{/if}"><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+            {/loop} 
+            {/pc} 
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+﻿/*产品tab*/
+.prodinfotab{display:block;}
+.prodinfotab .tabheader{clear:both;text-align:left;border-bottom:1px #CCC solid;}
+.prodinfotab .tabheader .tab_t{clear:both;overflow:hidden;padding:0px 0px 0px 10px;margin:0px;background:#d80808;}
+.prodinfotab .tab_t dd{float:left;text-align:center;width:auto;padding:0px 10px;cursor:pointer;margin:6px 0px;height:30px;line-height:30px;font-size:16px;color:#d80808;font-weight:500;font-family:"Microsoft YaHei",Tahoma,Verdana,"Simsun";}
+.prodinfotab .tab_t dd.current{background:#fff;border-radius:10px;color:#d80808;}
+
+.prodinfotab .tabcontent{clear:both;border:0px solid #ADC2BD;padding:10px 5px 10px 10px;line-height:180%;height:100%}
+
+@media only screen and (max-width:768px) 
+{
+.prodinfotab .tab_t dd{font-size:14px;padding:0px 5px;}
+}
+
+/*tab却换*/
+.tab{}
+.tab .tabheader{clear:both;height:25px;text-align:left;background:url(images/title_bg.gif) repeat-x 0 0;border:0 solid #BCD9F5;border-width:1px 1px 0px 1px;overflow:hidden}
+.tab .header .sign{float:left;height:25px;}
+.tab .tabcontent{clear:both;border:1px solid #BCD9F5;border-width:0px 1px 1px 1px;padding:5px 5px 5px 5px;height:100%}
+
+.tab .tab_t dd.current{background:url(images/sign_bg_over.gif) no-repeat 0 0;font-weight:bold;}
+.tab .tab_t dd{color:#003060;background:url(images/sign_bg.gif) repeat-x 0 0;float:left;width:80px;width:80px;height:21px;padding:4px 0 0 20px;cursor:pointer}
+
+.tab_c dd{display:none} /*公用隐藏内容dd样式*/

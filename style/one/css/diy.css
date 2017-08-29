@@ -1,0 +1,149 @@
+﻿/*视频播放*/
+@font-face {
+  font-family: 'VideoJS';
+  src: url('font/vjs.eot');
+  src: url('font/vjs.eot?#iefix') format('embedded-opentype'), url('font/vjs.woff') format('woff'), url('font/vjs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.page_style #example_video_1:hover .vjs-big-play-button{*background:url(images/spbg.png) no-repeat 0 0;}
+.page_style .vjs-default-skin .vjs-big-play-button{top:50%;left:50%;margin-left:-2em;margin-top:-1.3em;*background:url(images/spbg.png) no-repeat 0 0;*border:0px;*width:126px;*height:84px;*margin:-42px 0px 0px -63px;}
+
+
+.w1000{clear:both;overflow:hidden;width:100%;max-width:1000px;margin:0px auto;}
+.zdy_page .wc_more{padding:1em 0px 3em 0px;}/*兼容ie7,8*/
+.wc_more{clear:both;overflow:hidden;width:100%;text-align:center;padding:1em 0px 0px 0px;}
+a.mk_more{display:inline-block;*display:inline;*zoom:1;line-height:34px;padding:0 30px;transition:all 0.5s ease 0s;border:1px solid #666;color:#666;}
+a.mk_more:hover{background-color:#D80808;color:#fff;border-color:#D80808;text-decoration:none;}
+.page_style .col-xs-6{padding:0px 0.5em;}
+
+
+/*关于我们*/
+.sy_gtwm_box{clear:both;overflow:hidden;max-width:1200px;margin:4em auto;}
+.sy_gtwm_box li a{display:block;margin:10px 0px;}
+.sy_gtwm_box li a i{display:block;text-align:center;}
+.sy_gtwm_box li a i img{display:block;width:auto;height:auto;max-width:35px;margin:0px auto;}
+.sy_gtwm_box li a h3{text-align:center;font-size:18px;font-weight:normal;margin:1.5em 0px;color:#666;}
+.sy_gtwm_box li a:hover h3{color:#d80808;}
+.sy_gtwm_box li a span{display:block;line-height:25px;text-align:center;color:#666;}
+
+.sy_gywmjj_box{clear:both;overflow:hidden;background:#f2f5f8;margin:0px;position:relative;}
+.sy_gywmjj_box .zdy_left{padding:0px !important;position:absolute;left:0px;top:0px;height:100%;}
+.sy_gywmjj_box .zdy_left img{display:block;height:100%;width:100%;}
+.sy_gywmjj_box .zdy_right{padding:0px 60px !important;float:right;}
+.sy_gywmjj_box .zdy_right h3{text-align:left;font-size:30px;color:#37474f;margin:3em 0px 1em 0px;}
+.sy_gywmjj_box .zdy_right .gywmjj_con{clear:both;overflow:hidden;color:#222;text-align:left;line-height:2em;max-height:18em;}
+.sy_gywmjj_box .wc_more{text-align:left;margin:2.5em 0px 3em 0px;}
+
+@media (max-width:768px)
+{
+.sy_gywmjj_box .zdy_left{position:static;}
+.sy_gywmjj_box .zdy_right h3{margin:1em 0px;}
+.sy_gywmjj_box .zdy_left{padding:0px !important;}
+.sy_gywmjj_box .zdy_right{padding:0px 1em !important;}
+}
+
+/*设计团队*/
+.sy_sjtd_box{clear:both;overflow:hidden;margin:0px;position:relative;}
+.sy_sjtd_box .zdy_right{padding:0px !important;position:absolute;right:0px;top:0px;height:100%;}
+.sy_sjtd_box .zdy_right #js_slide_focus_18{position:static;}
+.sy_sjtd_box .zdy_left{padding:0px 60px !important;}
+.sy_sjtd_box .zdy_left h3{text-align:left;font-size:30px;color:#37474f;margin:3em 0px 1em 0px;}
+.sy_sjtd_box .zdy_left .gywmjj_con{clear:both;overflow:hidden;color:#222;text-align:left;line-height:2em;max-height:18em;}
+.sy_sjtd_box .wc_more{text-align:left;margin:2.5em 0px 3em 0px;}
+@media (min-width:768px)
+{
+#js_slide_focus_18,#js_slide_focus_18 ul,#js_slide_focus_18 ul li,#js_slide_focus_18 ul li img{width:100% !important; height:100% !important;}
+}
+@media (max-width:768px)
+{
+.sy_sjtd_box .zdy_right{position:static;}
+.sy_sjtd_box .zdy_right #js_slide_focus_18{position:relative;}
+.sy_sjtd_box .zdy_left{padding:0px 1em !important;}
+.sy_sjtd_box .zdy_left h3{margin:1em 0px;}
+}
+
+/*自定义模块标题*/
+.zxal_box{clear:both;overflow:hidden;}
+.zxal_sign{font-weight:400;font-size:30px;color:#37474f;display:inline-block;*display:inline;*zoom:1;}
+.zxal_sign span{}
+.zxal_sign i{display:block;background:#222;height:2px;width:40px;margin:1em auto;}
+
+
+/*装修案例*/
+.sy_zxal_box{clear:both;overflow:hidden;background:#f2f4f8;padding:4em 0px 0px 0px;margin:0px;}
+
+/*宣传视频*/
+.sy_xcsp_box{clear:both;overflow:hidden;background:#f2f4f8;padding:4em 0px;margin:0px;}
+.sy_xcsp_box .xcsp_con{clear:both;overflow:hidden;}
+.sy_sp{width:100%;max-width:1250px;height:500px;}
+@media (max-width:768px)
+{
+.sy_sp{width:100%;height:300px;}
+}
+
+
+
+
+
+
+
+
+
+
+/*轮播和快速链接*/
+.mk_lbkslj{clear:both;overflow:hidden;margin:0px;}
+.mk_lbkslj dd{padding:0px;}
+.mk_lbkslj dd.col-sm-4{padding:0px 0px 0px 20px;}
+.mk_lbkslj dd span{padding:0px 0px 5px 0px !important;}
+.mk_lbkslj dd span.span2{padding:0px 0px 5px 5px !important;}
+.mk_lbkslj span a{display:block;height:156px;text-align:center;color:white;padding:115px 0px 0px 0px;line-height:19px; background-position:center 25px;}
+.mk_lbkslj span a:hover{color:#fff;}
+.mk_lbkslj .a1{background:#39a0ff url(images/t1.png) no-repeat center 25px;}
+.mk_lbkslj .a2{background:#fb7e2a url(images/t2.png) no-repeat center 25px;}
+.mk_lbkslj .a3{background:#8968ff url(images/t3.png) no-repeat center 25px;}
+.mk_lbkslj .a4{background:#f0a901 url(images/t4.png) no-repeat center 25px;}
+.mk_lbkslj .a5{background:#c443e5 url(images/t5.png) no-repeat center 25px;}
+.mk_lbkslj .a6{background:#a5c610 url(images/t6.png) no-repeat center 25px;}
+@media only screen and (max-width:1000px) 
+{
+.mk_lbkslj span a{height:115px;padding:90px 0px 0px 0px;}
+.mk_lbkslj .a1,.mk_lbkslj .a2,.mk_lbkslj .a3,.mk_lbkslj .a4,.mk_lbkslj .a5,.mk_lbkslj .a6{background-position:center 5px;}
+}
+@media (max-width:768px)
+{
+.mk_lbkslj dd.col-sm-4{padding:10px 10px 0px 10px;}
+}
+
+/*模板通用标题样式*/
+.tyys_title{clear:both;height:34px;border-bottom:1px solid #e5d3e9;position:relative;margin-bottom:15px;}
+.tyys_title .tyys_left{float:left;color:#666;font-size:14px;line-height:32.5px;border-bottom:1px solid #ff75ac;position:absolute;top:0px;left:0px;margin-right:53px;overflow:hidden;}
+.tyys_title .tyys_left strong{font-size:16px;}
+.tyys_title .tyys_left i{font-style:normal;padding:0px 5px;color:#999;}
+.tyys_title .tyys_left em{font-style:normal;color:#ff9b0d;}
+.tyys_title .tyys_more{float:right;color:#eb6da0;background:url(images/icon-more.png) no-repeat right center;padding:0px 15px 0px 0px;line-height:33px;}
+
+/*关于我们*/
+.mk_gywmzx{clear:both;overflow:hidden;margin:0px;}
+
+/*月子环境*/
+.sy_yzhj{clear:both;overflow:hidden;margin:0px;}
+@media (max-width:768px)
+{
+.sy_yzhj{padding:0px 10px;}
+}
+
+/*专家团队*/
+.sy_zjtd_box{clear:both;overflow:hidden;margin:0px;}
+.sy_zjtd_box .zjtd_title{clear:both;overflow:hidden;margin:0px 0px 30px 0px;}
+.sy_zjtd_box .zjtd_title span{display:block;text-align:center;margin-bottom:8px;font-size:28px;}
+.sy_zjtd_box .zjtd_title em{display:block;font-style:normal;text-align:center;margin:0 40px;font-size:18px;color:#eb6da0;}
+
+
+/*月子百科知识 妈妈的见证*/
+.sy_yzbkzs_box .yzbkzs-left{padding:0px 10px 0px 0px}
+.sy_yzbkzs_box .yzbkzs-right{padding:0px 0px 0px 10px;}
+@media (max-width:768px)
+{
+.sy_yzbkzs_box .yzbkzs-left,.sy_yzbkzs_box .yzbkzs-right{padding:0px 10px;}
+}
