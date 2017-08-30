@@ -1,0 +1,40 @@
+    <div class="bottom_box">
+      <div class="wz_db">
+        <div class="wz_db_com1">
+          <ul>
+
+
+            {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+            {loop $data $r}
+            <li style="padding-top:70px;">
+              <ul>
+                <li>
+                  <a href="{$r[url]}">{$r[catname]}</a>
+                </li>
+              </ul>
+            </li>
+            {/loop} 
+            {/pc}
+            <li>
+              <div class="ewm">
+                <img src="/gxss/style/two/images/ewm.jpg" />
+              </div>
+              <div class="ewmcom">
+                扫码关注最新动态
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="wz_db_com2">
+          <div class="wz_db_cc">
+            版权所有 2008-2012 湘ICP备8888888Powered by pageadmin 5.3.2 &copy;2004-2016 www.pageadmin.net
+          </div>
+        </div>
+      </div>
+    </div>
+    <div align=center style='padding:5px'>Powered by <a href='http://www.pageadmin.net'><b>PageAdmin CMS</b></a></div>
+  </div>
+</body>
+
+
+</html>
