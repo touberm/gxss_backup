@@ -1,6 +1,6 @@
 ﻿var Show_Style=3;
 var Image_15=new Array();
-var Pics="/e/images/banner/banner-3.jpg";
+var Pics="/gxss/style/four/images/banner/banner-store.jpg";
 var Links="";
 var Titles="";
 var Alts="";
@@ -14,7 +14,9 @@ for(i=0;i<Apic15.length;i++)
    Image_15.src = Apic15[i]; 
   }
 
-
+/* 
+  1920/600 3440/x
+*/
 
   var FHTML='<div id="js_slide_focus_15" class="slide_focus focus_style3" ><a class="prev"></a><a class="next"></a>';
   

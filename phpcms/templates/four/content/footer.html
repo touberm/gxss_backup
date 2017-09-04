@@ -1,9 +1,18 @@
-<div class="bottom_box">
+<div class="bottom_box" style="background:url(/gxss/style/four/images/bottom_bg.png) no-repeat center;background-size:100% 100%;">
+  <!-- background:#e6e6e8; -->
     <div class="db_content">
       <div class="db_com">
         <div class="dibu_com1">
           <div class="c1_fl col-sm-8">
-            <a class="a1" href="">天猫商城</a><a class="a2" href="">官方微博</a><a class="a3" href="/index.aspx?lanmuid=65&sublanmuid=742">人才招聘</a>
+            {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"} 
+            {loop $data $r}
+            <a href="{$r[url]}">{$r[catname]}</a>
+            {/loop} 
+            {/pc}   
+
+
+
+            <!-- <a class="a1" href="">天猫商城</a><a class="a2" href="">官方微博</a><a class="a3" href="/index.aspx?lanmuid=65&sublanmuid=742">人才招聘</a> -->
           </div>
           <div class="c1_fr col-sm-4">
             加盟热线：020 - 1234 567
@@ -14,7 +23,7 @@
             &copy; Copyright xxx.com XX服装 版权所有 粤ICP备12345678号
           </div>
           <div class="c2_fr col-sm-4">
-            <img src="/e/images/logo.png" />
+            <img src="/gxss/style/images/logo.png" />
           </div>
         </div>
       </div>
