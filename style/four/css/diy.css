@@ -196,7 +196,7 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 
 
 /*底部*/
-.db_content{background:url(/gxss/style/four/images/bottom-bg.jpg) repeat left top;padding:40px 0;color:#999}
+.db_content{padding:40px 0;color:#999}
 .db_com{max-width:1000px;margin:0 auto;clear:both;overflow:hidden;}
 .db_com .dibu_com1{clear:both;line-height:60px;}
 .db_com .dibu_com1 .c1_fl{}

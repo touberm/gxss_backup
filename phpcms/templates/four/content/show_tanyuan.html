@@ -1,0 +1,51 @@
+{template "content",header}
+    <div class="main_box main_box_style1">
+      <div class="main_box_inner">
+        <div class="main_box_inner_left">
+          <div id="nav_104" class="nav_box nav_box_menu">
+
+            <div class="nav_title"><span class="nav_sign">{$CATEGORYS[$catid][catname]}</span><span class="nav_more"></span></div>
+            <div id="nav_menu_104" class="nav_menu">
+              <style>
+              #rootul_104 li{background:#343434;}
+              #rootul_104 li a{color:#fff;}
+              #rootul_104 li:hover a{color:#000;}
+              </style>
+              <ul id="rootul_104">
+                {pc:content action="lists" catid="$catid" order="id ASC" num="10"}
+                {loop $data $r}
+                <li><a href="{$r[url]}">{$r[title]}</a></li>
+                {/loop}
+                {/pc}
+                
+              </ul>
+            </div>
+          </div>
+          <script type="text/javascript">
+            Initialization_Nav("rootul_104", "sl688", "0");
+          </script>
+        </div>
+        <style>
+          .qhd-content a:hover{color:#29f;}
+        </style>
+        <div class="main_box_inner_right" style="padding-top:30px;">
+          
+          <div class="sublanmu_box sublanmu_box_688">
+            <div class="sublanmu_content sublanmu_content_introduct">
+              <div class="qhd-content">
+                {$content}
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear main_box_inner_bottom"></div>
+    </div>
+
+
+        
+
+
+
+{template "content",footer}
