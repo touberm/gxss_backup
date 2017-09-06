@@ -46,7 +46,7 @@
       <div class="top_box_inner">
         <div class="topcontent"></div>
         <div class="clear"></div>
-        <div class="logo"><a href="/"><img src="/gxss/style/images/logo.png" border="0"></a></div>
+        <div class="logo"><a href="{WEB_PATH}"><img src="/gxss/style/images/logo.png" border="0"></a></div>
         <div class="menu_box" id="Menu">
           <ul>
             {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"} 
@@ -78,6 +78,19 @@
               {/if}
             
             </li>
+             {elseif $r[catid] == 7}
+            <li class="menu_style {if (($r[catid] == 6) && $catid == 0) || $r[catid] == $catid} menu_current{/if}"><a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=7&id=13" class="menu"><span>{$r[catname]}</span></a> 
+              {if  $CATEGORYS[$r[catid]][child]}
+              <ul class="dropdown-menu">
+                {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+                {loop $data $rr}
+                <li><a href="{$rr[url]}">{$rr[catname]}</a></li>
+                {/loop}
+                {/pc}
+              </ul>
+              {/if}
+            
+            </li>
             {elseif $r[catid] == 10}
             <li class="menu_style {if (($r[catid] == 6) && $catid == 0) || $r[catid] == $catid} menu_current{/if}"><a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=10&id=11" class="menu"><span>{$r[catname]}</span></a> 
               {if  $CATEGORYS[$r[catid]][child]}
@@ -85,6 +98,19 @@
                 {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
                 {loop $data $rr}
                 <li><a href="{$rr[url]}">{$rr[catname]}</a></li>
+                {/loop}
+                {/pc}
+              </ul>
+              {/if}
+            
+            </li>
+            {elseif $r[catid] == 20}
+            <li class="menu_style {if (($r[catid] == 6) && $catid == 0) || $r[catid] == $catid} menu_current{/if}"><a href="{$r[url]}" class="menu" target="_blank"><span>{$r[catname]}</span></a> 
+              {if  $CATEGORYS[$r[catid]][child]}
+              <ul class="dropdown-menu">
+                {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+                {loop $data $rr}
+                <li><a href="{$rr[url]}" >{$rr[catname]}</a></li>
                 {/loop}
                 {/pc}
               </ul>

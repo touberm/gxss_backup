@@ -106,7 +106,7 @@ body{padding:0px;background:#fff}
 .main_box_style1{padding-bottom:30px;position:relative;}
 .main_box_style1 .main_box_inner{width:100%;clear:both;margin:0 auto;max-width:1000px;}
 .main_box_style1 .main_box_inner_left{float:left;width:100%;margin:0 0px 0 0;text-align:left;}
-.main_box_style1 .main_box_inner_right{width:100%;padding:0em 0px 0px 0px;overflow:hidden;text-align:left;float:right;background:#FFF;margin-top:30px;}
+.main_box_style1 .main_box_inner_right{width:100%;padding:0em 0px 0px 0px;overflow:hidden;text-align:left;float:right;background:#FFF;margin-top:30px;background:url(/gxss/style/four/images/store_bg.jpg) no-repeat center;background-size:100% 100%;}
 @media only screen and (max-width:1000px) 
 {
 .sublanmupage .main_box_style .main_box_inner{width:95%;}
@@ -222,7 +222,7 @@ body{padding:0px;background:#fff}
 
 .module_title{clear:both;text-align:center;overflow:hidden;height:auto;padding:1em 0px 1em 0px;margin-top:20px;background:url(/gxss/style/four/images/tit_bg_img.png) no-repeat center center;}
 .module_sign{font-size:24px;color:#866f68;line-height:30px;vertical-align:middle;text-align:center;width:100%;}
-.module_more{line-height:30px;padding:0px;display:inline-block;vertical-align:middle;background:url(images/morebg.png) no-repeat center center;margin-top:5px;}
+.module_more{line-height:30px;padding:0px;display:inline-block;vertical-align:middle;margin-top:5px;}
 .module_more a{color:#fff;font-size:13px;}
 .module_more a:hover{color:#FFF;}
 
