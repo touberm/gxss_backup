@@ -79,7 +79,7 @@ function Wows(classname,hdclassname,cout)/*classname执行动画元素 hdclassna
 
 
 
-function ShowSubMenu(id) //显示下拉
+/* function ShowSubMenu(id) //显示下拉
  {
    var $Menu=$("#Menu");
    if($Menu.size()!=1){return;}
@@ -139,7 +139,7 @@ function ShowSubMenu(id) //显示下拉
       break;
    }
  }
-
+ */
 
 
 

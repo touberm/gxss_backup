@@ -1,6 +1,6 @@
 ﻿var Show_Style=3;
 var Image_12=new Array();
-var Pics="/gxss/style/four/images/banner/banner-1.jpg|/gxss/style/four/images/banner/banner-2.jpg";
+var Pics="/gxss/style/four/images/banner/banner-1.jpg";
 var Links="";
 var Titles="";
 var Alts="";

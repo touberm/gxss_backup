@@ -1,0 +1,104 @@
+    <div class="bottom_box">
+			<div class="db_content">
+				<div class="db_com row">
+					<div class="dbc_c2">
+						<div class="row">
+							<div class="col-xs-12 col-sm-8 dv2">
+								<ul>
+									<li class="col-xs-12 col-sm-4">
+										<div class="tits">
+											{$CATEGORYS[21][catname]}
+										</div>
+										<ul>
+                      {pc:content action="lists" catid="21" num="8" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+                      {loop $data $r}
+                      <li>
+												<a href="{$r[url]}">{$r[title]}</a>
+											</li>
+                      {/loop}
+                      {/pc}
+											
+										</ul>
+									</li>
+									<li class="col-xs-12 col-sm-4">
+										<div class="tits">
+											服务
+										</div>
+										<ul>
+                      <li>
+												<a href="{$CATEGORYS[27][url]}">{$CATEGORYS[27][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[23][url]}">{$CATEGORYS[23][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[22][url]}">{$CATEGORYS[22][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[24][url]}">{$CATEGORYS[24][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[20][url]}">{$CATEGORYS[20][catname]}</a>
+											</li>
+										</ul>
+									</li>
+									<li class="col-xs-12 col-sm-4">
+										<div class="tits">
+											{$CATEGORYS[25][catname]}
+										</div>
+										<ul>
+											{pc:content action="lists" catid="25" num="8" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+                      {loop $data $r}
+                      <li>
+												<a href="{$r[url]}">{$r[title]}</a>
+											</li>
+                      {/loop}
+                      {/pc}
+                      <li>
+												<a href="{$CATEGORYS[26][url]}">{$CATEGORYS[26][catname]}</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-12 col-sm-2 dv1">
+								<div class="d1">
+									<img src="/gxss/style/five/images/diy/ewm.jpg" />
+								</div>
+								<div>
+									官方微博
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-2 dv1">
+								<div class="d1">
+									<img src="/gxss/style/five/images/diy/ewm.jpg" />
+								</div>
+								<div>
+									官方微信
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="db_contents">
+				<div class="db_c_com">
+					XXXX 版权所有 XXIPC备：XXXXXXXX号-X 咨询热线：XXX-XXXX-XXX
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+

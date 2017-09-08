@@ -34,9 +34,21 @@
                     <div class="marquee_pic marquee" id="m_211_0"><a class="prev"></a><a class="next"></a>
                       <!--控制按钮-->
                       <div class="inner">
-                        <ul>
-
+                        <ul>  
+                          {pc:content action="lists" catid="19" order="id DESC" num="20" page="$_GET[page]"}
+                          {loop $data $r}
                           <li class="hx">
+                            <a href="{$r[url]}" target="_self">
+                              <img src="{$r[thumb]}" border="0">
+                            </a>
+                            <a href="{$r[url]}" target="_self" title="{$r[title]}">{$r[title]}</a>
+                          </li>
+                          {/loop}
+                          {/pc}
+
+
+
+                          <!-- <li class="hx">
                             <a href="/index.aspx?lanmuid=67&sublanmuid=697&id=79" target="_self">
                               <img src="/gxss/style/four/images/product/1.jpg" border="0">
                             </a>
@@ -69,7 +81,7 @@
                               <img src="/gxss/style/four/images/product/5.jpg" border="0">
                             </a>
                             <a href="/index.aspx?lanmuid=67&sublanmuid=697&id=83" target="_self" title="五行佩饰">五行佩饰</a>
-                          </li>
+                          </li> -->
 
                           
 
@@ -80,7 +92,7 @@
                       marquee("m_211_0", "left", 1500);
                     </script>
                   </div>
-                  <a href="/index.aspx?lanmuid=67&sublanmuid=697" class="sy_pc_more">查看更多 ></a>
+                  <a href="{$CATEGORYS[19][url]}" class="sy_pc_more">查看更多 ></a>
                 </div>
               </div>
 
@@ -97,7 +109,7 @@
               <div class="sy_about_us" >
                 <div class="sy_ab_com" style="font-size:18px;line-height:26px;text-align:left;text-indent:2em;">观象授时是古天文学的伟大成就。中国社会科学院考古研究所冯时教授认为“在远古社会掌握天时的人就是了解天意的人，或者是可以与天沟通的人。”江晓原先生认为，“观象授时是依据历法知识，安排统治阶级的重大政治事务日程”。在我们看来不管是哪种解释，观象授时不仅仅是天文活动，更重要的是一种维护王权的政治活动，由此以祖配天、君权神授的古老宗教观也就天然形成。可见，由天文而人文是中国古人天然的思想路径。</div>
                 <div class="sy_ab_img"><img src="/gxss/style/four/images/ab_img.jpg"></div>
-                <a href="/index.aspx?lanmuid=62&sublanmuid=688" class="sy_ab_more" style="font-size:16px;">了解详情</a>
+                <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=6&id=6" class="sy_ab_more" style="font-size:16px;">了解详情</a>
               </div>
 
             </div>
@@ -113,7 +125,7 @@
               <div class="sy_zhaoshang">
                 <div class="col-xs-12 col-sm-6 zs_fl ">
                   <div class="fl_com">
-                    <a href="http://localhost/gxss/index.php?m=content&c=index&a=lists&catid=8">
+                    <a href="{$CATEGORYS[20][url]}" target="_blank">
                       <!-- 
                         476*441 x/633
 
@@ -132,7 +144,7 @@
                 </div>
                 <div class=" col-xs-12 col-sm-6 zs_fr">
                   <div class="fr_com1">
-                    <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=10&id=11">
+                    <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=10&id=11">
                       <div class="com_pic">
                         <img src="/gxss/style/four/images/diy/sy_img2.jpg">
                       </div>
@@ -144,7 +156,7 @@
                     </a>
                   </div>
                   <div class="fr_com2">
-                    <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=7&id=13">
+                    <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=7&id=13">
                       <div class="com_pic">
                         <img src="/gxss/style/four/images/diy/sy_img3.jpg">
                       </div>
@@ -169,7 +181,7 @@
             <div id="module_content_233" class="module_content module_content_introduct">
 
               <div class="sy_cus" style="background-size:100% 100%;">
-                <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=14&id=9">
+                <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=14&id=9">
                   <div class="sy_cus_com">
                     <span class="s1">ABOUT US</span>
                     <span class="s2">观象我们</span>

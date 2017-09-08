@@ -7,14 +7,16 @@
             {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"} 
             {loop $data $r}
             {if $r[catid] == 6}
-            <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=6&id=6">{$r[catname]}</a> 
+            <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=6&id=6">{$r[catname]}</a> 
               
             {elseif $r[catid] == 14}
-            <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=14&id=9">{$r[catname]}</a> 
+            <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=14&id=9">{$r[catname]}</a> 
             {elseif $r[catid] == 7}
-            <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=7&id=13">{$r[catname]}</a> 
+            <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=7&id=13">{$r[catname]}</a> 
             {elseif $r[catid] == 10}
-            <a href="http://localhost/gxss/index.php?m=content&c=index&a=show&catid=10&id=11">{$r[catname]}</a> 
+            <a href="{WEB_PATH}index.php?m=content&c=index&a=show&catid=10&id=11">{$r[catname]}</a> 
+            {elseif $r[catid] == 20}
+            <a href="{$r[url]}" target="_blank">{$r[catname]}</a> 
             {else}
             <a href="{$r[url]}">{$r[catname]}</a>
             {/if}
@@ -42,12 +44,12 @@
             <!-- <a class="a1" href="">天猫商城</a><a class="a2" href="">官方微博</a><a class="a3" href="/index.aspx?lanmuid=65&sublanmuid=742">人才招聘</a> -->
           </div>
           <div class="c1_fr col-sm-4">
-            加盟热线：020 - 1234 567
+            加盟热线：xxx - xxxx xxx
           </div>
         </div>
         <div class="dibu_com2">
           <div class="c2_fl col-sm-8 ">
-            &copy; Copyright xxx.com XX服装 版权所有 粤ICP备12345678号
+            &copy; Copyright xxx.com XXX 版权所有 XXICP备 xxxxxxxx号
           </div>
           <div class="c2_fr col-sm-4">
             <img src="/gxss/style/images/logo.png" />
@@ -56,8 +58,7 @@
       </div>
     </div>
   </div>
-  <div align=center style='padding:5px'>Powered by <a href='http://www.pageadmin.net'><b>PageAdmin CMS</b></a></div>
-  </div>
+
 </body>
 
 </html>

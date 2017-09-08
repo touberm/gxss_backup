@@ -1,4 +1,4 @@
-﻿function ShowSubMenu(id) //显示下拉
+﻿/* function ShowSubMenu(id) //显示下拉
  {
    var $Menu=$("#Menu");
    if($Menu.size()!=1){return;}
@@ -14,7 +14,7 @@
     {
      case 2:
        $MenuItem.children("ul").hide();
-       document.write('<link rel="stylesheet" type="text/css" href="/e/css/submenu.css" />');
+       document.write('<link rel="stylesheet" type="text/css" href="/gxss/style/four/css/submenu.css" />');
        $CurrentMenuItem.children("ul").show();
        $CurrentMenuItem.addClass(classname).siblings().removeClass(classname);
        $MenuItem.mouseenter(function(){$(this).addClass(classname).children("ul").show();$(this).siblings().removeClass(classname).children("ul").hide();});
@@ -24,7 +24,7 @@
         $MenuItem.children("ul").hide();
         $MenuItem.mouseenter(function(){$(this).addClass(classname).siblings().removeClass(classname);});
         $MenuItem.mouseleave(function(){$(this).removeClass(classname);});
-        document.write('<link rel="stylesheet" type="text/css" href="/e/css/dropmenu.css" />');
+        document.write('<link rel="stylesheet" type="text/css" href="/gxss/style/four/css/dropmenu.css" />');
         $MenuItem.mouseenter(function(){$(this).children("ul").slideDown("fast");});
         $MenuItem.mouseleave(function(){$(this).children("ul").slideUp("fast");});
        if(typeof(Lanmu_Id)!="undefined")
@@ -33,7 +33,7 @@
        }
       break;
    }
- }
+ } */
 
 function Initialization_Nav(rootulid,currentid,parentids) //初始化导航
   {
@@ -155,40 +155,9 @@ function subnav(id,isroot) //导航前小图标点击效果
      }
  }
 
-function AddFavourites(sid,tb,Id) //收藏
- {
-   var x=new PAAjax();
-   x.setarg("post",true);
-   var Url=location.href;
-   x.send("/e/aspx/add_favo.aspx","table="+tb+"&id="+Id+"&url="+UrlEncode(Url)+"&post=add",function(v){AddFavourites_Back(sid,v)});
- }
 
-function TongJi(s)//流量统计
- {
-   var url=location.href;
-   var re=/http:\/\/([^\/]+)\//i;
-   var h = url.match(re);
-   url=h[1];
-   var referer=document.referrer;
-   if(referer==null){referer=""};
-   if(referer=="http://www.baidu.com/s?wd=a")
-    {
-      return;
-    }
-   var tjcookie=GetCookie("tongji");
-   if(tjcookie!="1")
-      {
-       var x=new PAAjax();
-       x.setarg("get",true);
-       x.send("/e/aspx/count.aspx","referer="+UrlEncode(referer)+"&s="+s,function(v){TJCookie(v,referer)});
-      }
- }
 
-function TJCookie(v,Referer)
- {
-   SetCookie("tongji","1",24*60*60);
-   SetCookie("referer",Referer,24*60*60);
- }
+
 
 function FontZoom(Size,Id)
  {
@@ -197,36 +166,9 @@ function FontZoom(Size,Id)
    Obj.style.lineHeight="180%"; 
  }
 
-function ordercart(sid,Table,Id,thecolor,thesize,thetype) //产品订单界面，sid：分站点id，table:产品的数据表明，id：产品id
- {
-    if(Table==null){Table="";}
-    if(Id==null){Id=0;}
-    if(thecolor==null){thecolor="";}
-    if(thesize==null){thesize="";}
-    if(thetype==null){thetype="";}
-    var Membercookie=GetCookie("Member");
-    if(Membercookie!="")
-     {
-      IDialog('订购窗口',"/e/order/order.aspx?s="+sid+"&table="+Table+"&id="+Id+"&color="+thecolor+"&size="+thesize+"&type="+thetype,800,500);
-     }
-    else
-     {
-      quick_login(sid,"ordercart('"+sid+"','"+Table+"',"+Id+")");
-     }
- }
 
-function exchange(sid,Table,Id) //积分兑换界面
- {
-    var Membercookie=GetCookie("Member");
-    if(Membercookie!="")
-     {
-       IDialog('积分兑换窗口',"/e/order/exchange.aspx?s="+sid+"&table="+Table+"&id="+Id,550,450);
-     }
-    else
-     {
-      quick_login(sid,"exchange('"+sid+"','"+Table+"',"+Id+")");
-     }
- }
+
+
 
 function open_calendar(Id,showtime)
  {

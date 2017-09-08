@@ -20,10 +20,10 @@ if (window.ActiveXObject)
    } 
   if(IEVersion==9)
    {
-    document.write('<script src="/e/incs/pie/PIE_IE9.js" type="text/javascript"></script>');
+    document.write('<script src="/gxss/style/four/js/incs/pie/PIE_IE9.js" type="text/javascript"></script>');
    }
   else if(IEVersion>0 && IEVersion<9)
    {
-    document.write('<script src="/e/incs/pie/PIE_IE678.js" type="text/javascript"></script>');
+    document.write('<script src="/gxss/style/four/js/incs/pie/PIE_IE678.js" type="text/javascript"></script>');
    }
  }

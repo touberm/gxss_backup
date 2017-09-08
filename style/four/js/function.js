@@ -1154,4 +1154,4 @@ if(nums>1)
   }
 }
 
-if(!IsPC()){document.write("<script src=\"/e/js/jquery.touchwipe.js\" type=\"text/javascript\"></script>");}
+if(!IsPC()){document.write("<script src=\"/gxss/style/four/js/jquery.touchwipe.js\" type=\"text/javascript\"></script>");}
