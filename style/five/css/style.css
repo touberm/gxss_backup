@@ -27,7 +27,7 @@ img{max-width:100%;height:auto;width:auto;}
 /*顶部及主菜单样式*/
 
 
-.top_box{clear:both;display:block;width:100%;padding:0px;margin:0px;position:relative;z-index:4;background:#EA5503;}
+.top_box{clear:both;display:block;width:100%;padding:0px;margin:0px;position:relative;z-index:999;background:#EA5503;}
 .top_box_inner{clear:both;display:block;margin:0px auto;height:100%;max-width:1000px;}
 .topcontent{line-height:40px;padding:5px 0px;text-align:left;width:50%;float:right;text-align:right;display:none}
 .topcontent .topcoms{height:40px;line-height:40px;font-size:25px;font-weight:bold;color:#FFF;margin-top:30px;}
@@ -36,7 +36,7 @@ img{max-width:100%;height:auto;width:auto;}
 .top_right{float:right;}
 .logo{width:100%;padding:20px 0px;margin:5px auto;max-width:260px;text-align:left;float:left;}
 .logo a{height:80px;line-height:80px;text-align:left;}
-.logo a img{display:block;width:auto;height:auto;display:block;}
+.logo a img{display:block;height:80px;display:block;}
 .page_style .menu_box{padding:0px;width:100%;margin:0px 0px 0px 0px;}
 
 .menu_box ul{width:auto;margin:0px 0 0 0px;padding:0px;border-radius:0px;text-align:center;}
@@ -285,7 +285,7 @@ body{padding:0px;background:#fff}
 .lanmupage .current_location{display:block;}
 .current_location{clear:both;overflow:hidden;text-align:center;width:100%;border-bottom:1px solid #ddd;}
 .current_location ul{max-width:1000px;margin:0 auto;}
-.current_location_1{float:right;line-height:40px;background:url(/gxss/style/five/images/icon-home.png) no-repeat left 40px;color:#EA5503;}
+.current_location_1{float:right;line-height:40px;color:#EA5503;}
 .current_location_1 a{color:#EA5503;}
 .current_location_1 a:hover{color:#000;}
 .current_location_2{float:left;text-align:left;line-height:40px;font-size:20px;color:#EA5503;padding-left:10px;font-weight:bold;}

@@ -1,16 +1,27 @@
 {template "content","header"}
     <div class="banner">
       <div align="center">
-        <img src="/gxss/style/five/images/banner/banner-1.jpg" />
+        <img src="/gxss/style/five/images/banner/banner-1.png" />
       </div>
     </div>
-
+    <style>
+      .main_box .sublanmu_box .clearturn:after{content: '';display: block;clear:both;}
+      .main_box .sublanmu_box .fl{float: left;}
+      .main_box .sublanmu_box .fr{float: right;}
+      .main_box .sublanmu_box .turnpn{padding-top:2em;}
+      .main_box .sublanmu_box .turnpn li{font-size: 14px;}
+      .current_location_1{padding-left:10px;}
+      @media (max-width:767px) {
+        .current_location_1{float:none;}
+        .current_location_2{float:none;}
+      }
+    </style>
     <div class="main_box main_box_style">
       <div class="main_box_inner">
         <div class="current_location">
           <ul>
-            <li class="current_location_1">当前位置：<a href="{WEB_PATH}">首页</a>  &gt;<a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a>
-            <li class="current_location_2">{$title}</li>
+            <li class="current_location_2 text-left">{$title}</li>
+            <li class="current_location_1 text-left">当前位置：<a href="{WEB_PATH}">首页</a>  &gt;<a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a> 
           </ul>
         </div>
 
@@ -22,6 +33,15 @@
                 <div class="team-info">
                   <div class="qhd-content">
                     {$content}
+                    <div class="clearturn turnpn">
+                      <li class="fl col-md-4 col-xs-6 text-left">
+                        <a href="{$previous_page[url]}"> <small>&lt;&lt;</small>&nbsp;{$previous_page[title]}</a>
+                      </li>
+                      <li class="fr col-md-4 col-xs-6 text-right">
+                        <a href="{$next_page[url]}">{$next_page[title]}&nbsp;<small>&gt;&gt;</small></a>
+                      </li>
+                    </div>
+                    
                   </div>
                 </div>
               </div>

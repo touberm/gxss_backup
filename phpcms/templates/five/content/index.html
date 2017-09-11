@@ -37,7 +37,7 @@
 
 							<div class="sy_about">
 								<div class="row">
-									<div class="col-xs-12 col-sm-6 sa_pic"><img src="/gxss/style/five/images/diy/about.jpg"></div>
+									<div class="col-xs-12 col-sm-6 sa_pic"><img src="/gxss/style/five/images/diy/qywh.jpg"></div>
 									<div class="col-xs-12 col-sm-6 sa_com">北京观象授时旅游文化投资有限公司成立于2015年，公司位于北京市朝阳区皇家园林日坛公园。其前身为盛世宜和（北京）文化发展有限公司。我们一直致力于传统文化的旅游开发和经营落地，在溯源与传承中国传统文化的实践中，努力寻找被现代文明遗失在历史角落的那份祥和与安宁。在拜金狂潮、人格迭失的时代，如何让更多的人从新树立起，以中国文化自信为核心的世界观、人生观、价值观成为我们的社会责任。历史的车轮必定会永不停歇的前行，在现代物理、生物、天文等科学高度发展的当下，人类文明的起源发展好像离之渐行渐远。烦躁、不安已经成为目前人们貌似习惯了的一种生活状态。彷徨、无助凸显我们在时空长河中的微不足道。 
                   <a href="{$CATEGORYS[25][url]}">【查看详情】</a>
                   </div>
@@ -91,7 +91,7 @@
 								<div>
 									<ul class="tpzs_box">
 
-										{pc:content action="lists" catid="23" num="8" siteid="$siteid" order="listorder DESC"}
+										{pc:content action="lists" catid="23" num="8" siteid="$siteid" order="listorder ASC"}
 										{loop $data $r}
 										<li class="col-md-3 col-sm-6">
 											<a class="pic" href="{$r[url]}">
@@ -186,7 +186,7 @@
 										</li>
 										{else}
 										<li class="col-xs-12 col-md-6 ztyw_right">
-											<div class="row">
+											<div class="row" style="margin-left:0;margin-right:0;">
 												<div class="con">
 													<a class="title" href="{$r[url]}">{$r[title]}</a>
 													<div class="introduct">{$r[description]}...</div>
@@ -204,7 +204,7 @@
 
 									</ul>
 								</div>
-								<a href="{$CATEGORTS[24][url]}" class="mored">了解更多</a>
+								<a href="{$CATEGORYS[24][url]}" class="mored">了解更多</a>
 							</div>
 
 						</div>
@@ -213,20 +213,17 @@
         </div>
         <!-- 加入我们 -->
         <div id="module_276" class="module_box">
-					<div class="module_box_inner">
-						<div class="module_title"><span class="module_sign"><div>加入我们</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">JOIN US</div><i class="mark-right"></i></div></span>
-							<span class="module_more"></span>
-						</div>
-						<div id="module_content_276" class="module_content module_content_introduct">
-
-							<div class="sy_join">
-								<div class="join_c1">成功只属于敢于实现梦想的人！</div>
-								<div class="join_c1">加入我们，给你一个放飞梦想的舞台！</div>
-								<a href="/index.aspx?lanmuid=64&sublanmuid=803" class="mores">查看详情</a>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3 col-sm-offset-3 col-xs-12 text-center">
+								<h2 style="color:#ccc;font-weight:normal;padding-bottom:1.4em;">官方微信</h2>
+								<img src="/gxss/style/five/images/gfwx.jpg" alt="" style="padding-bottom:1.4em;">
 							</div>
-
+							<div class="col-sm-3 col-xs-12 text-center">
+								<h2 style="color:#ccc;font-weight:normal;padding-bottom:1.4em;">官方微博</h2>
+								<img src="/gxss/style/five/images/gfwx.jpg" alt="" style="padding-bottom:1.4em;">
+							</div>
 						</div>
-						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
 					</div>
         </div>
         
@@ -267,6 +264,8 @@
 										map.addControl(new BMap.OverviewMapControl());
 										var marker = new BMap.Marker(point);
 										map.addOverlay(marker);
+										map.disableDragging();     //禁止拖拽
+										map.disableScrollWheelZoom(); //禁止缩放 开启缩放map.enableScrollWheelZoom(true);
 										var infoWinOpts = {}
 										var sitetxt =
 											"<div style='text-align:left;color:#333;line-height:25px;'><li>地址：xx省xx市xxxxxx </li><li>电话：xxx-xxxxxxxx</li></div>";

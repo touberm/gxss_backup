@@ -1,7 +1,16 @@
 {template "content","header"}
+
+    <style>
+    .main_box .sublanmu_box .tpzs_box li a img{max-width:100%;}
+    .current_location_1{padding-left:10px;}
+    @media (max-width:767px) {
+      .current_location_1{float:none;}
+      .current_location_2{float:none;}
+    }
+    </style>
     <div class="banner">
       <div align="center">
-        <img src="/gxss/style/five/images/banner/banner-1.jpg" />
+        <img src="/gxss/style/five/images/banner/banner-1.png" />
       </div>
     </div>
 
@@ -9,15 +18,15 @@
       <div class="main_box_inner">
         <div class="current_location">
           <ul>
-            <li class="current_location_1">当前位置：<a href="{WEB_PATH}">首页</a> &gt; <a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a> 
             <li class="current_location_2">{$CATEGORYS[$catid][catname]}</li>
+            <li class="current_location_1 text-left">当前位置：<a href="{WEB_PATH}">首页</a> &gt; <a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a>
           </ul>
         </div>
 
         <div class="sublanmu_box">
           <div class="sublanmu_content sublanmu_content_article">
             <ul class="tpzs_box">
-              {pc:content  action="lists" catid="$catid" order="id DESC" num="20" page="$_GET[page]"}
+              {pc:content  action="lists" catid="$catid" order="id ASC" num="20" page="$_GET[page]"}
               {loop $data $r}
               <li class="tpzs_animate col-md-4 col-xs-12">
                 <a class="pic" href="{$r[url]}">
