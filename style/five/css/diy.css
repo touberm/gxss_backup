@@ -25,7 +25,7 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 .top_com1 .top_d_right{text-align:right}
 .top_com2{margin-top:50px;}
 .top_com2 .top_c_c2{position:absolute;top:0px;right:0px;}
-.top_com2 .top_com2_c1{color:#FF0000;font-size:24px;background:url(images/dhbg.png) no-repeat left center;padding-left:40px;}
+.top_com2 .top_com2_c1{color:#69110d;font-size:24px;background:url(images/dhbg.png) no-repeat left center;padding-left:40px;}
 
 
 /*首页_关于我们*/
@@ -39,16 +39,16 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 /*首页_业务介绍*/
 .sy_yewu{max-width:1000px;margin:0 auto;}
 .sy_yewu .ywjs{text-align:center;padding:0px 10px ;margin:10px 0;}
-.sy_yewu .ywjs span{display:block;background:#FF5B03;color:#FFF;}
-.sy_yewu .ywjs span.s1{padding:30px 0 10px 0}
-.sy_yewu .ywjs span.s2{padding:10px 0 20px 0;font-size:18px}
+.sy_yewu .ywjs span{display:block;background:#680f0b/* #69110d */;color:#FFF;}
+.sy_yewu .ywjs span.s1{padding:0;/* padding:30px 0 10px 0 */}
+.sy_yewu .ywjs span.s2{padding:10px 0 10px 0;border-radius:4px;/* padding:10px 0 20px 0; */font-size:18px}
 
 
 
 
 /*首页_案例展示*/
 .sy_anli{max-width:1000px;margin:0 auto;}
-.sy_anli .mored{width:120px;height:35px;line-height:35px;text-align:center;display:block;margin:0 auto;background:#FF5B03;color:#FFF;}
+.sy_anli .mored{width:120px;height:35px;line-height:35px;text-align:center;display:block;margin:0 auto;background:#69110d;color:#FFF;}
 
 
 
@@ -83,7 +83,7 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 
 /*首页_新闻资讯*/
 .sy_news{max-width:1000px;margin:0 auto;}
-.sy_news .mored{width:120px;height:40px;line-height:40px;color:#FFF;background:#FF5B03;display:block;margin:20px auto;text-align:center;}
+.sy_news .mored{width:120px;height:40px;line-height:40px;color:#FFF;background:#69110d;display:block;margin:20px auto;text-align:center;}
 
 
 
@@ -110,7 +110,7 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 .contact_com{padding-top:50px;}
 .contact_com li{line-height:40px;}
 
-.lx_tit{text-align:left;font-size:24px;color:#FF0000;}
+.lx_tit{text-align:left;font-size:24px;color:#69110d;}
 .lianxifs .titse{text-align:left;line-height:40px;font-weight:bold;font-size:18px;color:#EA5503}
 .lianxifs span{display:block;line-height:35px;}
 .lianxifs_ewm span{display:block;}
@@ -139,7 +139,7 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 
 
 /*底部*/
-.db_content{background:#252526;}
+.db_content{background-color:#252526;}
 .db_content .db_com{max-width:1000px;margin:0 auto;clear:both;overflow:hidden;padding:20px 10px;}
 .db_content .db_com .dbc_c2{float:left;width:100%}
 .db_content .db_com .dv2{margin-top:10px;text-align:left;}
@@ -156,6 +156,7 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 
 @media screen and (max-width:700px){
 .db_content .db_com .dv2 .com1{font-size:20px;padding-left:60px;height:50px;line-height:50px;}
+.db_content{background-color:#252526!important;background-image:none!important;}
 	}
 	
 	

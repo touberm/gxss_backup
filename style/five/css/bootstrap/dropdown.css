@@ -1,14 +1,14 @@
-.menu_box li ul{display:none;background:#D14B02;box-shadow:none;width:50px;margin-top:0px;}
+.menu_box li ul{display:none;background:#680f0b/* D14B02 */;box-shadow:none;width:50px;margin-top:0px;}
 .menu_box li ul li{clear:both;width:100%;position:relative;border-right:0px;}
 .menu_box li ul li a{height:45px;line-height:45px;padding:0px 10px;font-size:14px;color:#FFF;background:none}
 .menu_box li ul li a:hover{background-image:none}
 .menu_box li ul li ul{position:absolute;left:100%;top:0px;width:100%;}
 .menu_box li.menu_current ul li a{color:#fff;background:none}
-.menu_box li.menu_current ul li a:hover{color:#fff;background:#EA5503}
+.menu_box li.menu_current ul li a:hover{color:#680f0b/* fff */;background:#fff/* EA5503 */}
 
 
-.top_box .navbar-toggle{}
-.top_box .navbar-toggle span{height:4px;background:#FFF;}
+.top_box .navbar-toggle{background-color:#680f0b;}
+.top_box .navbar-toggle span{height:4px;background:#fff;}
 
 @media only screen and (min-width:1000px)
 {
