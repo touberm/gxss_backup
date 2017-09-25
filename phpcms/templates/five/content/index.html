@@ -23,7 +23,7 @@
 			<div class="main_box_inner">
 
 				<!-- 公司简介 -->
-				<div id="module_271" class="module_box" style="background:url(/gxss/style/five/images/diy/gsjjbg.png?v0.1) no-repeat center bottom;background-size:contain;">
+				<div id="module_271" class="module_box" style="background:url(/gxss/style/five/images/diy/gsjjbg.png?v0.1) no-repeat center center;background-size:contain;">
 					<div class="module_box_inner">
 						<div class="module_title">
 							<span class="module_sign">
@@ -51,7 +51,7 @@
 						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
 					</div>
         </div>
-        <!-- 业务介绍 -->
+        <!-- 服务内容 -->
         <div id="module_272" class="module_box">
 					<div class="module_box_inner">
 						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[27][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">BUSINESS INTRODUCTION</div><i class="mark-right"></i></div></span>
@@ -64,7 +64,7 @@
 
 									{pc:content action="lists" catid="27" num="10" siteid="$siteid" order="listorder ASC"}
 									{loop $data $r}
-									<div class="col-xs-6 col-sm-2 ywjs">
+									<div class="ywjs col-xs-6  ">
 										<a href="{$r[url]}">
 											<span class="s1">
 												<img src="{$r[thumb]}">
@@ -85,7 +85,7 @@
         <!-- 产品展示 -->
         <div id="module_273" class="module_box" style="background:url(/gxss/style/five/images/diy/cpbg.png?v0.1) no-repeat center center;background-size:contain;">
 					<div class="module_box_inner">
-						<div class="module_title"><span class="module_sign"><div>产品展示</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">SHOW CASES</div><i class="mark-right"></i></div></span>
+						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[32][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">SHOW CASES</div><i class="mark-right"></i></div></span>
 							<span class="module_more"></span>
 						</div>
 						<div id="module_content_273" class="module_content module_content_introduct">
@@ -114,12 +114,12 @@
 						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
 					</div>
         </div>
-        <!-- 核心团队 -->
+        <!-- 团队风采 -->
         <div id="module_274" class="module_box">
 					<div class="module_box_inner">
 						<div class="module_title">
 							<span class="module_sign">
-								<div>核心团队</div>
+								<div>{$CATEGORYS[26][catname]}</div>
 								<div class="module-title-content">
 									<i class="mark-left"></i>
 									<div class="th_tits">CORE OF THE TEAM</div>
@@ -240,10 +240,9 @@
 
 							<div class="sy_conatact">
 								<div class="sc_fs">
-									<span>电话：xxx-xxxxxxxx</span>
-									<span>传真：xxx-xxxxxxxx</span>
-									<span>邮箱：xxxxxxx@xxxx.com </span>
-									<span>地址：xx省xx市xxxxxx</span>
+									<span>电话：010-60846113</span>
+									<span>邮箱：277848720@qq.com </span>
+									<span>地址：北京市朝阳区日坛北路6号奥特利玛A0016</span>
 								</div>
 								<div>
 									<script src="http://api.map.baidu.com/api?v=1.4"></script>
@@ -259,19 +258,19 @@
 									<div id="mapbox"></div>
 									<script>
 										var map = new BMap.Map("mapbox"); // 创建Map实例，必须和地图容器id一致
-										var point = new BMap.Point(116.325299, 39.792947); // 创建点坐标
-										map.centerAndZoom(point, 16); // 初始化地图,设置中心点坐标和地图级别，最大19级
+										var point = new BMap.Point(116.449297,39.923272); // 创建点坐标
+										map.centerAndZoom(point, 18); // 初始化地图,设置中心点坐标和地图级别，最大19级
 										map.enableScrollWheelZoom(); //启用滚轮放大缩小
 										map.addControl(new BMap.NavigationControl());
 										map.addControl(new BMap.ScaleControl());
 										map.addControl(new BMap.OverviewMapControl());
 										var marker = new BMap.Marker(point);
 										map.addOverlay(marker);
-										map.disableDragging();     //禁止拖拽
-										map.disableScrollWheelZoom(); //禁止缩放 开启缩放map.enableScrollWheelZoom(true);
+										map.enableDragging();     //禁止拖拽
+										map.enableScrollWheelZoom(); //开启缩放 禁止map.disableScrollWheelZoom();
 										var infoWinOpts = {}
 										var sitetxt =
-											"<div style='text-align:left;color:#333;line-height:25px;'><li>地址：xx省xx市xxxxxx </li><li>电话：xxx-xxxxxxxx</li></div>";
+											"<div style='text-align:left;color:#333;line-height:25px;'><li>地址：北京市朝阳区日坛北路6号奥特利玛A0016</li><li>电话：010-60846113</li></div>";
 										var infoWin = new BMap.InfoWindow(sitetxt, infoWinOpts);
 										marker.openInfoWindow(infoWin);
 										marker.addEventListener("click", function () {

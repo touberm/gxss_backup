@@ -38,10 +38,22 @@ a.mk_more:hover{background-color:#005db4;color:#fff;border-color:#005db4;text-de
 
 /*首页_业务介绍*/
 .sy_yewu{max-width:1000px;margin:0 auto;}
-.sy_yewu .ywjs{text-align:center;padding:0px 10px ;margin:10px 0;}
+.sy_yewu .ywjs{text-align:center;padding:0px 10px ;margin:10px 0;width:14.28%;}
+/* .sy_yewu .ywjs{text-align:center;padding:0px 10px ;margin:10px 0;} */
 .sy_yewu .ywjs span{display:block;background:#680f0b/* #69110d */;color:#FFF;}
 .sy_yewu .ywjs span.s1{padding:0;/* padding:30px 0 10px 0 */}
-.sy_yewu .ywjs span.s2{padding:10px 0 10px 0;border-radius:4px;/* padding:10px 0 20px 0; */font-size:18px}
+.sy_yewu .ywjs span.s2{padding:10px 0 10px 0;border-radius:4px;/* padding:10px 0 20px 0; */font-size:14px}
+
+
+@media (max-width: 479px){
+	.sy_yewu .ywjs{width:100%;}
+}
+@media (max-width: 767px) and (min-width: 480px){
+	.sy_yewu .ywjs{width:50%;}
+}
+/* @media (min-width: 768px) and (max-width:991px){
+	.sy_yewu .ywjs{width:33%;}
+} */
 
 
 

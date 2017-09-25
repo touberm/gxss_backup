@@ -1,0 +1,88 @@
+{template "content","header"}
+    <div class="banner">
+      <div align="center">
+        <img src="{$CATEGORYS[$catid][image]}"  style="width:100%;"/>
+      </div>
+    </div>
+     <style>
+      .current_location_1{padding-left:10px;}
+      @media (max-width:767px) {
+        .current_location_1{float:none;}
+        .current_location_2{float:none;}
+      }
+    </style>
+
+    <div class="main_box main_box_style1">
+      <div class="main_box_inner">
+        <div class="main_box_inner_left">
+          <div id="nav_104" class="nav_box nav_box_menu">
+
+            <div class="nav_title"><span class="nav_sign">{$catname}</span><span class="nav_more"></span></div>
+            <div id="nav_menu_104" class="nav_menu">
+              <ul id="rootul_104">
+                {pc:content action="category" catid="$catid" num="25" order="listorder ASC" }
+                {php $n = 0;}
+                {loop $data $r}
+               
+                <li>
+                  <a href="{$r[url]}" {if $n == 1}class="current" {/if}>{$r[catname]}</a>
+                </li>
+                
+
+                {/loop}
+                {/pc}
+              </ul>
+            </div>
+          </div>
+          <script type="text/javascript">
+            Initialization_Nav("rootul_104", "sl694", "0");
+          </script>
+        </div>
+
+        <div class="main_box_inner_right">
+          <div class="current_location">
+            <ul>
+              
+              {pc:content action="category" catid="$catid" num="25" order="listorder ASC"}
+              {php $k = 0;}
+              {loop $data $r}
+              {php $k++;}
+              {if $k == 1}
+              <li class="current_location_2">{$r[catname]}</li>
+              <li class="current_location_1 text-left">当前位置：<a href="{WEB_PATH}">首页</a> > <a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a> > <a href="{$CATEGORYS[$r[catid]][url]}">{$CATEGORYS[$r[catid]][catname]}</a></li>
+              {/if}
+              {/loop}
+              {/pc}
+              
+              
+            </ul>
+          </div>
+          <div class="sublanmu_box">
+            <div class="sublanmu_content sublanmu_content_introduct">
+              {pc:content action="category" catid="$catid" num="25" order="listorder ASC"}
+              {php $k=0;}
+              {loop $data $rr}
+              {php $k++;}
+              {if $k == 1}
+                {pc:content  action="lists" catid="$rr[catid]" order="id ASC" num="10" moreinfo="1"}
+                {php $n = 0;}
+                {loop $data $r}
+                {if $n == 1}
+
+                {$r[content]} 
+                
+                {/if}
+                {/loop}
+                {/pc}
+              {/if}
+              {/loop}
+              {/pc}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear main_box_inner_bottom"></div>
+    </div>
+
+
+{template "content","footer"}

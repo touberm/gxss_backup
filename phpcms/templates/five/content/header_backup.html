@@ -57,7 +57,22 @@
             </li>
             {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"} 
             {loop $data $r}
-          
+            
+            
+            {if $r[catid] == 23}
+            <li class="menu_style {if $r[catid] == $catid} menu_current{/if}">
+              <a href="{$r[url]}" class="menu">
+                <span>{$r[catname]}</span>
+              </a> 
+            </li>
+            {elseif $r[catid] == 20}
+            <li class="menu_style {if $r[catid] == $catid} menu_current{/if}">
+              <a href="{$r[url]}" target="_blank" class="menu">
+                <span>{$r[catname]}</span>
+              </a> 
+            </li>
+
+            {else}
             <li class="menu_style {if $r[catid] == $catid}  menu_current{/if}"><a href="{$r[url]}" class="menu"><span>{$r[catname]} </span></a>
               {if  $CATEGORYS[$r[catid]][child] || $CATEGORYS[$r[catid]][items]}
               <ul class="dropdown-menu">
@@ -81,7 +96,7 @@
               {/if}
             
             </li>
-            
+            {/if}
            
             {/loop} 
             {/pc}
