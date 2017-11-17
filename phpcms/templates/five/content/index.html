@@ -1,15 +1,4 @@
 
-<!-- 
-  
-
-
-
-  /gxss/style/five/
-
-3200/x = 1680/600
-1680/945 3032/x
--->
-
 
 {template "content","header"}
 		<style>
@@ -23,7 +12,7 @@
 			<div class="main_box_inner">
 
 				<!-- 公司简介 -->
-				<div id="module_271" class="module_box" style="background:url(/gxss/style/five/images/diy/gsjjbg.png?v0.1) no-repeat center center;background-size:contain;">
+				<div class="module_box" style="background:url(/gxss/style/five/images/diy/gsjjbg.png?v0.1) no-repeat center center;background-size:contain;">
 					<div class="module_box_inner">
 						<div class="module_title">
 							<span class="module_sign">
@@ -40,8 +29,15 @@
 
 							<div class="sy_about">
 								<div class="row">
-									<div class="col-xs-12 col-sm-6 sa_pic"><img src="/gxss/style/five/images/diy/gsjj.jpg"></div>
-									<div class="col-xs-12 col-sm-6 sa_com">北京观象授时旅游文化投资有限公司成立于2015年，公司位于北京市朝阳区皇家园林日坛公园。其前身为盛世宜和（北京）文化发展有限公司。我们一直致力于传统文化的旅游开发和经营落地，在溯源与传承中国传统文化的实践中，努力寻找被现代文明遗失在历史角落的那份祥和与安宁。在拜金狂潮、人格迭失的时代，如何让更多的人从新树立起，以中国文化自信为核心的世界观、人生观、价值观成为我们的社会责任。历史的车轮必定会永不停歇的前行，在现代物理、生物、天文等科学高度发展的当下，人类文明的起源发展好像离之渐行渐远。烦躁、不安已经成为目前人们貌似习惯了的一种生活状态。彷徨、无助凸显我们在时空长河中的微不足道。 
+									{pc:content action="lists" catid="25" num="1" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+									{loop $data $r}
+									<div class="col-xs-12 col-sm-6 sa_pic">
+										<img src="{$r[thumb]}">
+									</div>
+									<div class="col-xs-12 col-sm-6 sa_com">
+									{$r[description]}
+									{/loop}
+									{/pc}
                   <a href="{$CATEGORYS[25][url]}">【查看详情】</a>
                   </div>
 								</div>
@@ -50,9 +46,56 @@
 						</div>
 						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
 					</div>
+				</div>
+				<!-- 最新活动 -->
+        <div class="module_box" style="background: no-repeat bottom center;background-size:contain;">
+					<div class="module_box_inner">
+						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[34][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">RECENT NEWS</div><i class="mark-right"></i></div></span>
+							<span class="module_more"></span>
+						</div>
+						<div id="module_content_275" class="module_content module_content_introduct">
+
+							<div class="sy_news">
+								<div>
+									<ul class="row zxhd">
+										{pc:content action="lists" catid="34" num="8" siteid="$siteid" order="listorder DESC" moreinfo="1"}
+										{php $n = 0;}
+										{loop $data $r}
+										{if $n == 1}
+										<li class="col-xs-12 col-md-6 zxhd_left">
+											<a href="{$r[url]}">
+												<span class="s1_pic">
+													<img src="{$r[thumb]}">
+												</span>
+												<span class="s1_tit">{$r[title]}</span></a>
+											<!-- <p class="p1_com">{$r[description]}...</p> -->
+										</li>
+										{else}
+										<li class="col-xs-12 col-md-6 zxhd_right">
+											<div class="row" style="margin-left:0;margin-right:0;">
+												<div class="con">
+													<a class="title" href="{$r[url]}">{$r[title]}</a>
+													<!-- <div class="introduct">{$r[description]}...</div> -->
+												</div>
+											</div>
+										</li>
+
+										{/if}
+										{/loop}
+										{/pc}
+									</ul>
+								</div>
+								<a href="{$CATEGORYS[34][url]}" class="mored">查看更多</a>
+							</div>
+
+						</div>
+						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
+					</div>
         </div>
+
+
         <!-- 服务内容 -->
-        <div id="module_272" class="module_box">
+        <div class="module_box">
 					<div class="module_box_inner">
 						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[27][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">BUSINESS INTRODUCTION</div><i class="mark-right"></i></div></span>
 							<span class="module_more"></span>
@@ -63,8 +106,10 @@
 								<div class="row">
 
 									{pc:content action="lists" catid="27" num="10" siteid="$siteid" order="listorder ASC"}
+									{php $n=0;}
 									{loop $data $r}
-									<div class="ywjs col-xs-6  ">
+									<!-- .ywjs /css/diy/41 line -->
+									<div class="ywjs col-xs-offset-3 col-xs-6 col-sm-2 {if $n == 1}col-sm-offset-1{else} col-sm-offset-0{/if} ">
 										<a href="{$r[url]}">
 											<span class="s1">
 												<img src="{$r[thumb]}">
@@ -83,9 +128,9 @@
 					</div>
         </div>
         <!-- 产品展示 -->
-        <div id="module_273" class="module_box" style="background:url(/gxss/style/five/images/diy/cpbg.png?v0.1) no-repeat center center;background-size:contain;">
+        <div class="module_box" style="background:url(/gxss/style/five/images/diy/cpbg.png?v0.1) no-repeat center center;background-size:contain;">
 					<div class="module_box_inner">
-						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[32][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">SHOW CASES</div><i class="mark-right"></i></div></span>
+						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[23][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">SHOW CASES</div><i class="mark-right"></i></div></span>
 							<span class="module_more"></span>
 						</div>
 						<div id="module_content_273" class="module_content module_content_introduct">
@@ -94,7 +139,7 @@
 								<div>
 									<ul class="tpzs_box">
 
-										{pc:content action="lists" catid="23" num="8" siteid="$siteid" order="listorder ASC"}
+										{pc:content action="lists" catid="33" num="8" siteid="$siteid" order="listorder ASC"}
 										{loop $data $r}
 										<li class="col-md-3 col-sm-6">
 											<a class="pic" href="{$r[url]}">
@@ -107,15 +152,64 @@
 										
 									</ul>
 								</div>
-								<a href="{$CATEGORYS[23][url]}" class="mored">查看更多</a>
+								<a href="{$CATEGORYS[33][url]}" class="mored">查看更多</a>
+							</div>
+
+						</div>
+						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
+					</div>
+				</div>
+
+				<!-- 环境学院 -->
+        <div class="module_box">
+					<div class="module_box_inner">
+						<div class="module_title"><span class="module_sign"><div>{$CATEGORYS[35][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">COLLERAGE OF THE ENVIRONMENT</div><i class="mark-right"></i></div></span>
+							<span class="module_more"></span>
+						</div>
+						<div id="module_content_275" class="module_content module_content_introduct">
+
+							<div class="sy_news">
+								<div>
+									<ul class="row zwyt">
+										{pc:content action="lists" catid="35" num="5" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+										{php $n = 0;}
+										{loop $data $r}
+										{if $n == 1}
+										<li class="col-xs-12 col-md-6 zwyt_right">
+											<a href="{$r[url]}">
+												<span class="s1_pic">
+													<img src="{$r[thumb]}">
+												</span>
+												<span class="s1_tit">{$r[title]}</span></a>
+											<p class="p1_com">{$r[description]}...</p>
+										</li>
+										{else}
+										<li class="col-xs-12 col-md-6 zwyt_left">
+											<div class="row" style="margin-left:0;margin-right:0;">
+												<div class="con">
+													<a class="title" href="{$r[url]}">{$r[title]}</a>
+													<div class="introduct">{$r[description]}...</div>
+												</div>
+											</div>
+										</li>
+
+										{/if}
+										{/loop}
+										{/pc}
+									</ul>
+								</div>
+								<a href="{$CATEGORYS[35][url]}" class="mored">了解更多</a>
 							</div>
 
 						</div>
 						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
 					</div>
         </div>
+				
+
+
         <!-- 团队风采 -->
-        <div id="module_274" class="module_box">
+        <div class="module_box">
 					<div class="module_box_inner">
 						<div class="module_title">
 							<span class="module_sign">
@@ -165,66 +259,22 @@
 					</div>
         </div>
         <!-- 探源之旅 -->
-        <div id="module_275" class="module_box" style="background:url(/gxss/style/five/images/diy/tybg.png) no-repeat bottom center;background-size:contain;">
-					<div class="module_box_inner">
-						<div class="module_title"><span class="module_sign"><div>探源之旅</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">TRIP TO GRASP</div><i class="mark-right"></i></div></span>
-							<span class="module_more"></span>
-						</div>
-						<div id="module_content_275" class="module_content module_content_introduct">
-
-							<div class="sy_news">
-								<div>
-									<ul class="row ztyw">
-										{pc:content action="lists" catid="24" num="8" siteid="$siteid" order="listorder ASC" moreinfo="1"}
-										{php $n = 0;}
-										{loop $data $r}
-										{if $n == 1}
-										<li class="col-xs-12 col-md-6 ztyw_left">
-											<a href="{$r[url]}">
-												<span class="s1_pic">
-													<img src="{$r[thumb]}">
-												</span>
-												<span class="s1_tit">{$r[title]}</span></a>
-											<p class="p1_com">{$r[description]}...</p>
-										</li>
-										{else}
-										<li class="col-xs-12 col-md-6 ztyw_right">
-											<div class="row" style="margin-left:0;margin-right:0;">
-												<div class="con">
-													<a class="title" href="{$r[url]}">{$r[title]}</a>
-													<div class="introduct">{$r[description]}...</div>
-												</div>
-											</div>
-										</li>
-
-										{/if}
-										{/loop}
-										{/pc}
-
-
-
-										
-
-									</ul>
-								</div>
-								<a href="{$CATEGORYS[24][url]}" class="mored">了解更多</a>
-							</div>
-
-						</div>
-						<div class="module_footer"><span class="l"></span><span class="r"></span></div>
-					</div>
-        </div>
+    
         <!-- 加入我们 -->
         <div id="module_276" class="module_box">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-3 col-sm-offset-3 col-xs-6 text-center">
+							<div class="col-sm-2 col-sm-offset-3 col-xs-6 col-xs-offset-3 text-center">
 								<h2 style="color:#ccc;font-weight:normal;padding-bottom:1.4em;">官方微信</h2>
 								<img src="/gxss/style/five/images/gfwx.jpg" alt="" style="padding-bottom:1.4em;">
 							</div>
-							<div class="col-sm-3 col-xs-6 text-center">
+							<div class="col-sm-2 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
 								<h2 style="color:#ccc;font-weight:normal;padding-bottom:1.4em;">官方微博</h2>
-								<img src="/gxss/style/five/images/gfwx.jpg" alt="" style="padding-bottom:1.4em;">
+								<img src="/gxss/style/five/images/gfwb.jpg" alt="" style="padding-bottom:1.4em;">
+							</div>
+							<div class="col-sm-2 col-sm-offset-0 col-xs-6 col-xs-offset-3 text-center">
+								<h2 style="color:#ccc;font-weight:normal;padding-bottom:1.4em;">APP下载</h2>
+								<img src="/gxss/style/five/images/app/android_ewm.jpg" alt="" style="padding-bottom:1.4em;">
 							</div>
 						</div>
 					</div>
@@ -290,5 +340,26 @@
 			</div>
 			<div class="clear main_box_inner_bottom"></div>
 		</div>
+		<!-- 最新活动 -->
+	<!-- 	<div id="recent">
+			<p class="title">{$CATEGORYS[33][catname]}</p>
+			<div class="con">
+				<ul>
+					{pc:content  action="lists" catid="33" order="id DESC" num="10"}
+					{loop $data $r}
+						<li><a href="{$r[url]}">{$r[title]}</a></li>
+					{/loop}
+					{/pc}
+					{pc:content  action="lists" catid="33" order="id DESC" num="10"}
+					{loop $data $r}
+						<li><a href="{$r[url]}">{$r[title]}</a></li>
+					{/loop}
+					{/pc}
+					
+
+				</ul>
+			</div>
+		</div> -->
+		<script src="/gxss/style/five/js/extra.js"></script>
 
 {template "content","footer"}

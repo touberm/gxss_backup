@@ -1,0 +1,45 @@
+<!-- 探源之旅 -->
+<div class="module_box" style="background:url(/gxss/style/five/images/diy/tybg.png) no-repeat bottom center;background-size:contain;">
+  <div class="module_box_inner">
+    <div class="module_title"><span class="module_sign"><div>{$CATEGORYS[24][catname]}</div><div class="module-title-content"><i class="mark-left"></i><div class="th_tits">TRIP TO GRASP</div><i class="mark-right"></i></div></span>
+      <span class="module_more"></span>
+    </div>
+    <div id="module_content_275" class="module_content module_content_introduct">
+
+      <div class="sy_news">
+        <div>
+          <ul class="row ztyw">
+            {pc:content action="lists" catid="24" num="5" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+            {php $n = 0;}
+            {loop $data $r}
+            {if $n == 1}
+            <li class="col-xs-12 col-md-6 ztyw_left">
+              <a href="{$r[url]}">
+                <span class="s1_pic">
+                  <img src="{$r[thumb]}">
+                </span>
+                <span class="s1_tit">{$r[title]}</span></a>
+              <p class="p1_com">{$r[description]}...</p>
+            </li>
+            {else}
+            <li class="col-xs-12 col-md-6 ztyw_right">
+              <div class="row" style="margin-left:0;margin-right:0;">
+                <div class="con">
+                  <a class="title" href="{$r[url]}">{$r[title]}</a>
+                  <div class="introduct">{$r[description]}...</div>
+                </div>
+              </div>
+            </li>
+
+            {/if}
+            {/loop}
+            {/pc}
+          </ul>
+        </div>
+        <a href="{$CATEGORYS[24][url]}" class="mored">了解更多</a>
+      </div>
+
+    </div>
+    <div class="module_footer"><span class="l"></span><span class="r"></span></div>
+  </div>
+</div>

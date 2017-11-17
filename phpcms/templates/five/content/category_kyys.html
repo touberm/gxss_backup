@@ -42,8 +42,7 @@
         <div class="main_box_inner_right">
           <div class="current_location">
             <ul>
-              
-              {pc:content action="category" catid="$catid" num="25" order="listorder ASC"}
+              {pc:content action="category" catid="$catid" num="25" order="listorder DESC"}
               {php $k = 0;}
               {loop $data $r}
               {php $k++;}
@@ -59,7 +58,7 @@
           </div>
           <div class="sublanmu_box">
             <div class="sublanmu_content sublanmu_content_introduct">
-              {pc:content action="category" catid="$catid" num="25" order="listorder ASC"}
+              {pc:content action="category" catid="$catid" num="25" order="listorder DESC"}
               {php $k=0;}
               {loop $data $rr}
               {php $k++;}
@@ -68,7 +67,7 @@
                 {php $n = 0;}
                 {loop $data $r}
                 {if $n == 1}
-
+                {$r[title]}
                 {$r[content]} 
                 
                 {/if}

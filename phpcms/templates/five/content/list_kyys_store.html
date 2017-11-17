@@ -7,6 +7,7 @@
       .current_location_1{float:none;}
       .current_location_2{float:none;}
     }
+    .clear_both:after{content:'';display: block;clear:both;}
     </style>
     <div class="banner">
       <div align="center">
@@ -36,7 +37,7 @@
         <div class="sublanmu_box">
           <div class="sublanmu_content sublanmu_content_article">
             <ul class="tpzs_box">
-              {pc:content  action="lists" catid="$catid" order="id ASC" num="20" page="$_GET[page]"}
+              {pc:content  action="lists" catid="$catid" order="id DESC" num="9" page="$_GET[page]"}
               {loop $data $r}
               <li class="tpzs_animate col-md-4 col-xs-12">
                 <a class="pic" href="{$r[url]}">
@@ -45,7 +46,11 @@
                 <a class="tpzs_title" href="{$r[url]}">{$r[title]}</a>
               </li>
               {/loop}
-
+              <br class="clear_both">
+              <div class="pages text-center">
+                <!--<a class="a1">{$catid[items]}条</a>-->
+                <div>{$pages}</div>
+              </div>
               {/pc}
 
             </ul>

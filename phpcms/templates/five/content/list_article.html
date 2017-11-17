@@ -1,0 +1,45 @@
+{template "content","header"}
+
+    <style>
+    .main_box .sublanmu_box .tpzs_box li a img{max-width:100%;}
+    .clear_both:after{content:'';display:block;clear:both;}
+    .recent li{background:#f2f2f2;margin-bottom:5px;font-size: 16px;line-height: 40px;padding-left: 20px;}
+    .fl{float:left;}
+    .fr{float:right;}
+    </style>
+    <div class="banner">
+      <div align="center">
+        <img src="{$CATEGORYS[$catid][image]}" style="width:100%;" />
+      </div>
+    </div>
+
+    <div class="main_box main_box_style">
+      <div class="main_box_inner">
+
+        <div class="sublanmu_box">
+          <div class="sublanmu_content sublanmu_content_article">
+            <ul class="recent">
+              {pc:content  action="lists" catid="$catid" order="listorder DESC" num="16" page="$_GET[page]"}
+              {php $n=0;}
+              {loop $data $r}
+              <li class="clear_both">
+                <a class="fl recent_title" href="{$r[url]}">{$r[title]}</a>
+                <span class="fr recent_time">{date('Y-m-d',$r[updatetime])}</span>
+              </li>
+              {/loop}
+
+              
+
+            </ul>
+            <div class="pages text-center">
+              <!--<a class="a1">{$catid[items]}条</a>-->
+              <div>{$pages}</div>
+            </div>
+              {/pc}
+          </div>
+        </div>
+      </div>
+      <div class="clear main_box_inner_bottom"></div>
+    </div>
+
+{template "content","footer"}
