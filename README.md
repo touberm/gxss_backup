@@ -21,4 +21,11 @@
       + style/five 修改/css/style.css及部分图片  可全部替换
 - 方案5:2017/9/21 13:46
   + 源文件 /origin/wzmb_five.zip
+- mod:2017/10/16
+  + todo app页面 观象授石 >> 观象授时
+- mod:2017/11/28
+  + 首页轮播改为phpcms广告位
+  + 修改文件位置 phpcms/template/default/poster/imagechange.html
+  + 修改方式,将原js文件内容修改近imagechange.html中
+  + 将生成js代码加入index.html文件中,生成位置,caches/poster_js/11(广告id).js
       
