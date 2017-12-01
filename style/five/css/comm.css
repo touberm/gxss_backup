@@ -335,7 +335,7 @@ text-indent:15px;
 .ztyw .ztyw_left .s1_pic img:hover{-webkit-transform:scale(1.2);-moz-transform:scale(1.2);}
 .ztyw .ztyw_left .s1_tit{display:block;line-height:35px;font-size:16px;color:#333;font-weight:bold;}
 .ztyw .ztyw_left .s1_tit:hover{color:#69110d;}
-.ztyw .ztyw_right{height:8.5em;overflow:hidden;margin-bottom:0.5em;float:right;}
+.ztyw .ztyw_right{overflow:hidden;margin-bottom:0.5em;float:right;}
 .ztyw .ztyw_right .date{float:left;max-width:85px;background-color:#f2f2f2;text-align:center;font-family:Arial;padding:0px;}
 .ztyw .ztyw_right .date span{display:block;}
 .ztyw .ztyw_right .date span.date1{line-height:50px;border-bottom:1px solid #fff;color:#666;font-size: 30px;}
@@ -343,11 +343,60 @@ text-indent:15px;
 .ztyw .ztyw_right .con a.title{clear:both;display:block;font-size:16px;line-height:1.5em;font-weight:bold;color:#4d4d4d;text-decoration:none;margin:0px 0px 0.5em 0px;overflow:hidden;}
 .ztyw .ztyw_right .con a.title:hover{color:#69110d;}
 .ztyw .ztyw_right .con div.introduct{color:#808080;line-height:1.5em;}
+
 	
 
 @media screen and (max-width:760px){
 	.ztyw .ztyw_left .s1_pic{display:block;overflow:hidden;height:auto;line-height:0px;vertical-align:middle;}
     .ztyw .ztyw_left .s1_pic img{width:100%;-webkit-transition:1.5s;-moz-transition:1.5s;display:block;vertical-align:middle;line-height:150px;}
+	}
+
+	/*左文右图*/
+.zwyt{}
+.zwyt .zwyt_right{float:right;}
+.zwyt .zwyt_right .s1_pic{display:block;overflow:hidden;height:220px;line-height:220px;}
+.zwyt .zwyt_right .s1_pic img{width:100%;-webkit-transition:1.5s;-moz-transition:1.5s;display:block;vertical-align:middle;height:100%;}
+.zwyt .zwyt_right .s1_pic img:hover{-webkit-transform:scale(1.2);-moz-transform:scale(1.2);}
+.zwyt .zwyt_right .s1_tit{display:block;line-height:35px;font-size:16px;color:#333;font-weight:bold;}
+.zwyt .zwyt_right .s1_tit:hover{color:#69110d;}
+.zwyt .zwyt_left{overflow:hidden;margin-bottom:0.5em;float:left;}
+.zwyt .zwyt_left .date{float:left;max-width:85px;background-color:#f2f2f2;text-align:center;font-family:Arial;padding:0px;}
+.zwyt .zwyt_left .date span{display:block;}
+.zwyt .zwyt_left .date span.date1{line-height:50px;border-bottom:1px solid #fff;color:#666;font-size: 30px;}
+.zwyt .zwyt_left .date span.date2{color:#999;line-height:22px;font-size:12px;}
+.zwyt .zwyt_left .con a.title{clear:both;display:block;font-size:16px;line-height:1.5em;font-weight:bold;color:#4d4d4d;text-decoration:none;margin:0px 0px 0.5em 0px;overflow:hidden;}
+.zwyt .zwyt_left .con a.title:hover{color:#69110d;}
+.zwyt .zwyt_left .con div.introduct{color:#808080;line-height:1.5em;}
+
+	
+
+@media screen and (max-width:760px){
+	.zwyt .zwyt_left .s1_pic{display:block;overflow:hidden;height:auto;line-height:0px;vertical-align:middle;}
+    .zwyt .zwyt_left .s1_pic img{width:100%;-webkit-transition:1.5s;-moz-transition:1.5s;display:block;vertical-align:middle;line-height:150px;}
+	}
+
+	/*最新活动*/
+.zxhd{}
+.zxhd .zxhd_left{float:left;}
+.zxhd .zxhd_left .s1_pic{display:block;overflow:hidden;height:220px;line-height:220px;}
+.zxhd .zxhd_left .s1_pic img{width:100%;-webkit-transition:1.5s;-moz-transition:1.5s;display:block;vertical-align:middle;height:100%;}
+.zxhd .zxhd_left .s1_pic img:hover{-webkit-transform:scale(1.2);-moz-transform:scale(1.2);}
+.zxhd .zxhd_left .s1_tit{display:block;line-height:35px;font-size:16px;color:#333;font-weight:bold;padding-left: 10px;}
+.zxhd .zxhd_left .s1_tit:hover{color:#69110d;}
+.zxhd .zxhd_right{overflow:hidden;margin-bottom:0.5em;float:right;}
+.zxhd .zxhd_right .date{float:left;max-width:85px;background-color:#f2f2f2;text-align:center;font-family:Arial;padding:0px;}
+.zxhd .zxhd_right .date span{display:block;}
+.zxhd .zxhd_right .date span.date1{line-height:50px;border-bottom:1px solid #fff;color:#666;font-size: 30px;}
+.zxhd .zxhd_right .date span.date2{color:#999;line-height:22px;font-size:12px;}
+.zxhd .zxhd_right .con a.title{clear:both;display:block;font-size:16px;line-height:1.5em;font-weight:bold;color:#4d4d4d;text-decoration:none;margin:0px 0px 0.5em 0px;overflow:hidden;padding-left:10px;}
+.zxhd .zxhd_right .con a.title:hover{color:#69110d;}
+.zxhd .zxhd_right .con div.introduct{color:#808080;line-height:1.5em;}
+
+	
+
+@media screen and (max-width:760px){
+	.zxhd .zxhd_left .s1_pic{display:block;overflow:hidden;height:auto;line-height:0px;vertical-align:middle;}
+    .zxhd .zxhd_left .s1_pic img{width:100%;-webkit-transition:1.5s;-moz-transition:1.5s;display:block;vertical-align:middle;line-height:150px;}
 	}
 
 

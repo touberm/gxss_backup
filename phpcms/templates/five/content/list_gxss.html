@@ -20,7 +20,7 @@
             <div class="nav_title"><span class="nav_sign">{$catname}</span><span class="nav_more"></span></div>
             <div id="nav_menu_104" class="nav_menu">
               <ul id="rootul_104">
-                {pc:content  action="lists" catid="$catid" order="id ASC" num="10"}
+                {pc:content  action="lists" catid="$catid" order="listorder ASC" num="10"}
                 {php $n = 0;}
                 {loop $data $r}
                
@@ -43,7 +43,7 @@
           <div class="current_location">
             <ul>
               
-              {pc:content  action="lists" catid="$catid" order="id ASC" num="10"}
+              {pc:content  action="lists" catid="$catid" order="listorder ASC" num="10"}
               {php $n = 0;}
               {loop $data $r}
               {if $n == 1}
@@ -57,7 +57,7 @@
           </div>
           <div class="sublanmu_box">
             <div class="sublanmu_content sublanmu_content_introduct">
-              {pc:content  action="lists" catid="$catid" order="id ASC" num="10" moreinfo="1"}
+              {pc:content  action="lists" catid="$catid" order="listorder ASC" num="10" moreinfo="1"}
               {php $n = 0;}
               {loop $data $r}
               {if $n == 1}

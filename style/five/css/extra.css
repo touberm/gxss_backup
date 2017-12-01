@@ -1,2 +1,19 @@
 /* .top_box .navbar-toggle .navbar-toggle{background-color:#EA5503;}
 .top_box .navbar-toggle button{border:1px solid red;} */
+.clear_both{content:'';display: block;clear:both;}
+
+
+/* 最新动态 */
+#recent{width:200px;position: fixed;top:200px;right:0;z-index: 99999;border:1px solid #666;border-radius: 2px;}
+#recent .title{color:#fff;background:#666;line-height:1.6em ;font-size: 16px;padding:5px 0;margin-bottom:0;}
+#recent .con{margin:0;padding:0;overflow: hidden;position:relative;background:#f2f2f2;}
+#recent ul{margin-bottom: 0;overflow: hidden;position: absolute;top:0;left:0;}
+#recent ul li{line-height: 26px;font-size: 14px;border-bottom: 1px dashed #777;text-align: justify;padding-left:5px;}
+
+
+/* footer */
+.beian{text-align: center;}
+.phone_show{display: none;}
+@media (max-width:640px){
+  .phone_show{display: block;}
+}

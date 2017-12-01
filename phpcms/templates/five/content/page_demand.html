@@ -1,63 +1,83 @@
 {template "content","header"}
 <style>
+.clear_both::after{content: "";display: block;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+
 .main_box{background:url(/gxss/style/five/images/app/1.png) no-repeat center;background-size: 100% 100%;}
 .main_box .sublanmu_box .tpzs_box li a{display:block;padding:2em 0 1em;}
 .bottom_box{margin-top:0;}
-#main{width:640px;margin:0 auto;text-align: left;}
-#main h2{text-align: center;}
-#main form>p,#main fieldset{font-size: 18px;}
+#main{width:100%;max-width: 400px;margin:0 auto;text-align: left;}
+#main h2{text-align: center;line-height: 4em;}
+#main form>p,#main fieldset{font-size: 16px;}
+.info{padding-left:0px;}
 #main form .title{display: inline-block;width:100px;}
+#main form input{border-radius: 4px;border:1px solid #000;outline: none;}
+#main form select{border-radius: 4px;border:1px solid #000;outline: none;}
 
 </style>
 <div class="main_box main_box_style">
   <div id="main">
     <h2>个人信息</h2>
     <form>
-      <p><label for="name" class="title">姓名:</label><input type="text" id="name" name="name" value="请输入您的姓名"></p>
-      <p>
-        <label for="" class="title">性别:</label>
+      
+      <p class="info">
+        <label for="name" class="title">姓&nbsp;&nbsp;名:</label>
+        <input type="text" id="name" name="name" value="请输入您的姓名">
+      </p>
+      
+      <p class="info">
+        <label for="" class="title">性&nbsp;&nbsp;别:</label>
         <input type="radio" name="sex"  class="sex" value="male" id="male">
         <label for="male"  class="sex">男</label>
         <input type="radio" name="sex"  class="sex" value="female" id="female">
         <label for="female" class="sex">女</label>
       </p>
       <!-- My97 -->
-      <p><label for="" class="title">出生日期:</label>
+      
+      <p class="info">
+        <label for="" class="title">出生日期:</label>
         <script language="javascript" type="text/javascript" src="/gxss/style/five/js/datepicker/WdatePicker.js"></script>
         <input id="d11" type="text" onClick="WdatePicker({skin:'twoer',vel:'birth'})"/>
       </p>
       <input type="hidden" id="birth">
       <!-- csSelect -->
-      <fieldset id="global_location">
-        <p><label for="" class="title">出生地:</label> 
+      <fieldset id="global_location" class="clear_both">
+        <label for="" class="title fl">出生地:</label>
+        <p class="info fl">
           <select class="state" data-first-title="选择省份" disabled="disabled"></select>
+          <br>
           <select class="city" disabled="disabled"></select>
+          <br>
           <select class="region" disabled="disabled"></select>
+          <br>
         </p>
       </fieldset>
       <script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
       
-      <script src="/gxss/style/five/js/csSelect/jquery.cxselect.min.js"></script>
+      <script src="/gxss/style/five/js/cxSelect/jquery.cxselect.min.js"></script>
       
       <script>
       
-      $.cxSelect.defaults.url = '/gxss/style/five/js/csSelect/cityData.min.json';
+      $.cxSelect.defaults.url = '/gxss/style/five/js/cxSelect/cityData.min.json';
       $('#global_location').cxSelect({
-        url: '/gxss/style/five/js/csSelect/cityData.min.json',
+        url: '/gxss/style/five/js/cxSelect/cityData.min.json',
         selects: [ 'state', 'city', 'region'],
         nodata: 'none'
       });
       </script>
 
-      <p>
-        <label for="" class="title">是否阴历:</label>
+      <label for="" class="title">是否阴历:</label>
+      <p class="info">
+        
         <input type="radio" name="lunar" class="lunar" value="lf" id="lf">
         <label for="lf"  class="lunar">否</label>
         <input type="radio" name="lunar" class="lunar" value="lt" id="lt">
         <label for="lt" class="lunar">是</label>
       </p>
-      <p>
-        <label for="" class="overlangth">是否使用真太阳时:</label>
+      <label for="" class="overlangth">是否使用真太阳时:</label>
+      <p class="info">
+        
         <input type="radio" name="sun" class="sun" value="sf" id="sf">
         <label for="sf"  class="sun">否</label>
         <input type="radio" name="sun" class="sun" value="st" id="st">
@@ -131,6 +151,13 @@ $(function(){
         sun:sun
       }
       console.log(info);
+
+
+
+
+
+
+
     }else{
       alert('请将信息填写完整!');
       return;

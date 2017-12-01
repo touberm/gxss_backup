@@ -21,7 +21,7 @@
             <div class="nav_title"><span class="nav_sign">{$CATEGORYS[$catid][catname]}</span><span class="nav_more"></span></div>
             <div id="nav_menu_104" class="nav_menu">
               <ul id="rootul_104">
-                {pc:content  action="lists" catid="$catid" order="id ASC" num="10"} 
+                {pc:content  action="lists" catid="$catid" order="listorder ASC" num="10"} 
                 {loop $data $r}
                 
                 <li>

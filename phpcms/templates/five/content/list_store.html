@@ -26,7 +26,7 @@
         <div class="sublanmu_box">
           <div class="sublanmu_content sublanmu_content_article">
             <ul class="tpzs_box">
-              {pc:content  action="lists" catid="$catid" order="id ASC" num="20" page="$_GET[page]"}
+              {pc:content  action="lists" catid="$catid" order="listorder ASC" num="20" page="$_GET[page]"}
               {loop $data $r}
               <li class="tpzs_animate col-md-4 col-xs-12">
                 <a class="pic" href="{$r[url]}">
