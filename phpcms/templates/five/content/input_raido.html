@@ -5,33 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style>
-    input[type="radio"] + label::before {
-    content: "\a0"; /*不换行空格*/
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 18px;
-    width: 1em;
-    height: 1em;
-    margin-right: .4em;
-    border-radius: 50%;
-    border: 1px solid #01cd78;
-    text-indent: .15em;
-    line-height: 1; 
-    }
-    input[type="radio"]:checked + label::before {
-    background-color: #01cd78;
-    background-clip: content-box;
-    padding: .2em;
-    }
-  </style>
+  <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
   
 
-  <input type="radio" name="cho" id='a'>
+  <input type="checkbox" name="cho" id='a'>
   <label for="a">A</label>
-  <input type="radio" name="cho" id='b'>
+  <input type="checkbox" name="cho" id='b'>
   <label for="b">B</label>
+  <input type="checkbox" name="cho" id='c'>
+  <label for="c">C</label>
+  <input type="checkbox" name="cho" id='d'>
+  <label for="d">D</label>
+
+
+  <script>
+  $(function(){
+    $('input').on('change',function(){
+      $('input').next('label').css({'color':'#000'});
+      $('input').filter(':checked').next('label').css({'color':'red'})
+    })
+  })
+  </script>
 </body>
 </html>

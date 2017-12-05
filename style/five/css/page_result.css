@@ -1,0 +1,26 @@
+/* reset */
+h1,h2,h3,h4,h5,h6,p,input,seletc,fieldset{margin:0;padding:0;}
+body{font-size:18px;font-family: 'Microsoft YaHei';}
+
+.clear_both::after{content: "";display: block;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+span{display: inline-block;}
+
+#result .main{width:768px;text-align: justify;margin:0 auto;}
+
+#result .tag{width:68px;vertical-align:top;}
+#result .flow{display:inline-block;text-align: center;}
+#result .flow .unit{width:130px;}
+#result .flow .ps{width:80px;}
+
+#result .tag{width:68px;}
+#result table.dy{border-collapse: collapse;text-align: center;width:768px;}
+#result table.dy td{border:2px solid #e9a94f;line-height: 30px;}
+#result table.dy tr.shishen{color:#00b0f0;}
+#result table.dy tr.tgdz{color:#00b050;}
+#result table.dy tr.age{color:#7d3d01;}
+
+#result table.liunian{border-collapse: collapse;text-align: center;width:768px;}
+#result table tr.year{color:#fba400;}
+#result table.liunian td{border:2px solid #e9a94f;line-height: 30px;}

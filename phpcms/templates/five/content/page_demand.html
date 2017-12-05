@@ -13,9 +13,9 @@
       
       <p class="unit">
         <label for="" class="title">性&nbsp;&nbsp;别:</label>
-        <input type="radio" name="sex"  class="sex" value="male" id="male">
+        <input type="radio" name="sex"  class="sex check" value="male" id="male">
         <label for="male"  class="sex">男</label>
-        <input type="radio" name="sex"  class="sex" value="female" id="female">
+        <input type="radio" name="sex"  class="sex check" value="female" id="female">
         <label for="female" class="sex">女</label>
       </p>
       <!-- My97 -->
@@ -31,14 +31,11 @@
       <!-- csSelect -->
       <fieldset id="global_location" class="clear_both unit">
         <label for="" class="title ">出生地:</label>
-        <p class="place">
+        <div class="place">
           <select class="state input" data-first-title="选择省份" disabled="disabled"></select>
-          <br>
           <select class="city input" disabled="disabled"></select>
-          <br>
           <select class="region input" disabled="disabled"></select>
-          <br>
-        </p>
+        </div>
       </fieldset>
 
 
@@ -52,26 +49,28 @@
       $('#global_location').cxSelect({
         url: '/gxss/style/five/js/cxSelect/cityData.min.json',
         selects: [ 'state', 'city', 'region'],
+        nodata:'none'
       });
       </script>
 
       
       <p class="unit">
         <label for="" class="title">是否阴历:</label>
-        <input type="radio" name="lunar" class="lunar" value="lf" id="lf">
+        <input type="radio" name="lunar" class="lunar check" value="lf" id="lf">
         <label for="lf"  class="lunar">否</label>
-        <input type="radio" name="lunar" class="lunar" value="lt" id="lt">
+        <input type="radio" name="lunar" class="lunar check" value="lt" id="lt">
         <label for="lt" class="lunar">是</label>
       </p>
       
       <p class="unit">
-        <label for="" class="overlangth">是否使用真太阳时:</label>
-        <input type="radio" name="sun" class="sun" value="sf" id="sf">
+        <label for="" class="overlangth title">是否使用真太阳时:</label>
+        <input type="radio" name="sun" class="sun check" value="sf" id="sf">
         <label for="sf"  class="sun">否</label>
-        <input type="radio" name="sun" class="sun" value="st" id="st">
+        <input type="radio" name="sun" class="sun check" value="st" id="st">
         <label for="st" class="sun">是</label>
       </p>
       <p>
+        <span class="title"></span>
         <input type="button" value="提交" id='sub'>
       </p>
     </form>
@@ -156,6 +155,6 @@ $(function(){
   
 })
 </script>
-
+<script src="/gxss/style/five/js/page_demand.js"></script>
 
 {template "content","footer"}
