@@ -2,17 +2,31 @@
 h1,h2,h3,h4,h5,h6,p,input,seletc,fieldset{margin:0;padding:0;}
 body{font-size:18px;font-family: 'Microsoft YaHei';}
 
+
+
 .clear_both::after{content: "";display: block;clear:both;}
 .fl{float:left;}
 .fr{float:right;}
 span{display: inline-block;}
 
+#result{}
 #result .main{width:768px;text-align: justify;margin:0 auto;}
 
+
+#result .header{margin-bottom: 30px;font-size:22px;}
+#result .header h2{text-align: center;line-height: 60px;}
+#result .header .tag{padding-right: 10px;width: auto;}
+#result .header .val{padding-right:40px;}
+
+
+#result .sec{width:100%;margin:0 auto 30px;}
+
 #result .tag{width:68px;vertical-align:top;}
-#result .flow{display:inline-block;text-align: center;}
-#result .flow .unit{width:130px;}
-#result .flow .ps{width:80px;}
+#result .info .flow{display:inline-block;text-align: center;}
+#result .info .flow .unit{width:130px;}
+#result .info .flow .ps{width:80px;}
+
+
 
 #result .tag{width:68px;}
 #result table.dy{border-collapse: collapse;text-align: center;width:768px;}
@@ -21,6 +35,52 @@ span{display: inline-block;}
 #result table.dy tr.tgdz{color:#00b050;}
 #result table.dy tr.age{color:#7d3d01;}
 
+#result .sec .tag{color:#fba400;}
+#result .info .unit{vertical-align: top;}
+#result .info .ps{vertical-align: middle;line-height: 76px;}
+#result .info .line{padding-bottom: 20px;}
+#result .info .val{color:#666;}
+
+/* 乾造 */
+#result .qz .tag{line-height: 60px;}
+#result .qz .attr_t{color:#994a0a;}
+#result .qz .attr_val{color:#e90101;font-size: 22px; font-weight: bold;}
+#result .qz .ps{color:#000;}
+
+
+
 #result table.liunian{border-collapse: collapse;text-align: center;width:768px;}
 #result table tr.year{color:#fba400;}
 #result table.liunian td{border:2px solid #e9a94f;line-height: 30px;}
+#result table.liunian .tgdz{color:#7d3d01;}
+
+
+#result .article h3{color:#e51c23;text-align: center;}
+#result .article p{text-indent: 2em;}
+#result .article p.hint{margin-top:20px;}
+#result .article p a{color:#0062cc;}
+
+
+@media(max-width:767px){
+  *{box-sizing: border-box;}
+  body{font-size:14px;}
+  #result .main{width:96vw;}
+
+  #result .header{margin-bottom: 30px;font-size:16px;}
+  #result .header h2{line-height: 60px;font-size: 22px;}
+  #result .header .tag{padding-left:0;}
+  #result .header .val{padding-right:5px;}
+
+  #result .info .flow{width:86vw;}
+  #result .info .flow .unit{width:18vw;}
+  #result .info .flow .ps{width:14vw;}
+
+
+  /* 乾造 */
+  #result .info .tag_flow{width:8vw;}
+  #result .qz .attr_val{font-size: 20px;}
+  #result .qz .ps{font-size: 10px;}
+ 
+
+
+}

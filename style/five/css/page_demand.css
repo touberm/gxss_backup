@@ -6,6 +6,7 @@ h1,h2,h3,h4,h5,h6,p,input,seletc,fieldset{margin:0;padding:0;}
 .fr{float:right;}
 
 /* .main_box{background:url(/gxss/style/five/images/app/1.png) no-repeat center;background-size: 100% 100%;} */
+.main_box{background:rgb(255, 243, 211);}
 .main_box .sublanmu_box .tpzs_box li a{display:block;padding:2em 0 1em;}
 .bottom_box{margin-top:0;}
 /* @for_media */
